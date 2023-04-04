@@ -2,6 +2,7 @@
 
 namespace App\DataFixtures;
 
+use App\Entity\Experience;
 use App\Entity\Project;
 use App\Entity\Skills;
 use Doctrine\Bundle\FixturesBundle\Fixture;
@@ -41,6 +42,25 @@ class AppFixtures extends Fixture
         $skill2->setName('Skill 2');
         $skill2->setPrecent(50);
         $manager->persist( $skill2 );
+
+        $expierence = new Experience();
+        $expierence->setCompanyName('company name');
+        $expierence->setPosition('position');
+        $expierence->setStartDate( new \DateTime('2022/12/02'));
+        $expierence->setEndDate(null);
+        $expierence->setJobDesc1('Lorem ipsum');
+        $expierence->setJobsDesc2('Lorem ipsum');
+        $expierence->setJobDesc3('Lorem ipsum');
+        $manager->persist( $expierence );
+
+        $expierence2 = new Experience();
+        $expierence2->setCompanyName('company name');
+        $expierence2->setPosition('position');
+        $expierence2->setStartDate( new \DateTime('2021/12/02'));
+        $expierence2->setEndDate(new \DateTime('2022/12/02'));
+        $expierence2->setJobDesc1('Lorem ipsum');
+        $expierence2->setJobsDesc2('Lorem ipsum');
+        $manager->persist( $expierence2 );
 
         $manager->flush();
     }

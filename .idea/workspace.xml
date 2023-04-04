@@ -4,36 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9e5fbb0e-4630-48db-becf-9f7bd1095c17" name="Changes" comment="added vue">
-      <change afterPath="$PROJECT_DIR$/assets/controllers/hello_controller.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/js/Vue/components/Footer.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/js/Vue/components/Main.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/js/Vue/components/Sidebar.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/js/Vue/components/about/About.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/js/Vue/components/contact/Contact.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/js/Vue/components/experience/Experience.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/js/Vue/components/loader/Loader.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/js/Vue/components/mySkills/MySkills.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/js/Vue/components/myWork/MyWork.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/js/Vue/store/main.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/js/Vue/store/projects.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/js/Vue/store/skills.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/styles/abstract/index.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/styles/base/_root.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/styles/base/index.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/styles/templates/_app.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/styles/templates/index.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/styles/ui/_hamburger.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/styles/ui/index.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/home/index.html.twig" afterDir="false" />
+    <list default="true" id="9e5fbb0e-4630-48db-becf-9f7bd1095c17" name="Changes" comment="added experience entity">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/scss/app.scss" beforeDir="false" afterPath="$PROJECT_DIR$/assets/styles/app.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/HomeController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/js/Vue/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/Vue/App.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/js/Vue/components/global/Title.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/DataFixtures/AppFixtures.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/DataFixtures/AppFixtures.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -255,7 +230,7 @@
       <workItem from="1680586613541" duration="4446000" />
       <workItem from="1680598715933" duration="2956000" />
       <workItem from="1680601806458" duration="172000" />
-      <workItem from="1680602013739" duration="16757000" />
+      <workItem from="1680602013739" duration="18042000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <created>1680529332524</created>
@@ -299,7 +274,28 @@
       <option name="project" value="LOCAL" />
       <updated>1680612230741</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="added vue templates">
+      <created>1680622887965</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1680622887965</updated>
+    </task>
+    <task id="LOCAL-00008" summary="added vue templates">
+      <created>1680622892760</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1680622892760</updated>
+    </task>
+    <task id="LOCAL-00009" summary="added experience entity">
+      <created>1680623610691</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1680623610691</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -325,7 +321,9 @@
     <MESSAGE value="added fixture and some dummy data" />
     <MESSAGE value="create sklills entity, fixture and some dummy data and cre" />
     <MESSAGE value="added vue" />
-    <option name="LAST_COMMIT_MESSAGE" value="added vue" />
+    <MESSAGE value="added vue templates" />
+    <MESSAGE value="added experience entity" />
+    <option name="LAST_COMMIT_MESSAGE" value="added experience entity" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
