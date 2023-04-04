@@ -6,16 +6,30 @@
  */
 
 // any CSS you import will output into a single css file (app.css in this case)
-import './scss/app.scss';
+import './styles/app.scss';
+
+// start the Stimulus application
+// import './bootstrap';
 
 import {createApp} from 'vue';
-// import Example from './js/Vue/Example.vue';
-import App from '@/Example.vue';
+import {createStore} from "vuex";
+import App from '@/App.vue';
+//store modules
+import mainStore from '@/store/main.js';
+import projectsStore from '@/store/projects.js';
+import skillsStore from '@/store/skills.js';
 
 const app = createApp({
     components: {
         App
     }
 });
-
+const store = createStore({
+   modules : {
+       main : mainStore,
+       projects : projectsStore,
+       skills : skillsStore,
+   }
+});
+app.use(store);
 app.mount("#app");

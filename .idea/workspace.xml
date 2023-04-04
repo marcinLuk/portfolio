@@ -4,47 +4,36 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9e5fbb0e-4630-48db-becf-9f7bd1095c17" name="Changes" comment="create sklills entity, fixture and some dummy data and cre">
-      <change afterPath="$PROJECT_DIR$/.idea/watcherTasks.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/app.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/bootstrap.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/controllers.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/scss/app.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config/packages/webpack_encore.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack.config.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+    <list default="true" id="9e5fbb0e-4630-48db-becf-9f7bd1095c17" name="Changes" comment="added vue">
+      <change afterPath="$PROJECT_DIR$/assets/controllers/hello_controller.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/js/Vue/components/Footer.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/js/Vue/components/Main.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/js/Vue/components/Sidebar.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/js/Vue/components/about/About.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/js/Vue/components/contact/Contact.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/js/Vue/components/experience/Experience.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/js/Vue/components/loader/Loader.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/js/Vue/components/mySkills/MySkills.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/js/Vue/components/myWork/MyWork.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/js/Vue/store/main.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/js/Vue/store/projects.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/js/Vue/store/skills.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/styles/abstract/index.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/styles/base/_root.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/styles/base/index.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/styles/templates/_app.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/styles/templates/index.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/styles/ui/_hamburger.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/styles/ui/index.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/home/index.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/bundles.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/bundles.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/scss/app.scss" beforeDir="false" afterPath="$PROJECT_DIR$/assets/styles/app.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Controller/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/HomeController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/symfony.lock" beforeDir="false" afterPath="$PROJECT_DIR$/symfony.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/global/footer/index.html.twig" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/global/nav/index.html.twig" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/home/index.html.twig" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/home/partials/about.html.twig" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/home/partials/all-projects.html.twig" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/home/partials/contact.html.twig" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/home/partials/my-work.html.twig" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/home/partials/selected-projects.html.twig" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/home/partials/sklils.twig" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/project/_delete_form.html.twig" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/project/_form.html.twig" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/project/edit.html.twig" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/project/index.html.twig" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/project/new.html.twig" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/project/show.html.twig" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/skills/_delete_form.html.twig" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/skills/_form.html.twig" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/skills/edit.html.twig" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/skills/index.html.twig" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/skills/new.html.twig" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/skills/show.html.twig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,6 +43,13 @@
   <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
     <execution />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Vue Single File Component" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
@@ -205,33 +201,36 @@
     <option name="showLibraryContents" value="true" />
     <option name="showMembers" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;//wsl$/Ubuntu/home/marcin6462/docker-compose-lamp/www/portfolio/templates&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.sourceCode.Twig&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "true",
+    "last_opened_file_path": "//wsl$/Ubuntu/home/marcin6462/docker-compose-lamp/www/portfolio/assets/js/Vue/store",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.sourceCode.Twig",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;mysql&quot;
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "mysql"
     ]
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="\\wsl$\Ubuntu\home\marcin6462\docker-compose-lamp\www\portfolio\assets\js\Vue\store" />
+      <recent name="\\wsl$\Ubuntu\home\marcin6462\docker-compose-lamp\www\portfolio\assets\styles\abstract" />
+      <recent name="\\wsl$\Ubuntu\home\marcin6462\docker-compose-lamp\www\portfolio\assets\styles\templates" />
       <recent name="\\wsl$\Ubuntu\home\marcin6462\docker-compose-lamp\www\portfolio\templates" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="\\wsl$\Ubuntu\home\marcin6462\docker-compose-lamp\www\portfolio\assets\js\Vue\store" />
       <recent name="\\wsl$\Ubuntu\home\marcin6462\docker-compose-lamp\www\portfolio\assets\js" />
       <recent name="\\wsl$\Ubuntu\home\marcin6462\docker-compose-lamp\www\portfolio\templates\global" />
     </key>
@@ -256,7 +255,7 @@
       <workItem from="1680586613541" duration="4446000" />
       <workItem from="1680598715933" duration="2956000" />
       <workItem from="1680601806458" duration="172000" />
-      <workItem from="1680602013739" duration="10175000" />
+      <workItem from="1680602013739" duration="16757000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <created>1680529332524</created>
@@ -293,7 +292,14 @@
       <option name="project" value="LOCAL" />
       <updated>1680609882445</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="added vue">
+      <created>1680612230741</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1680612230741</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -318,7 +324,8 @@
     <MESSAGE value="create home page controller, project entity and controller" />
     <MESSAGE value="added fixture and some dummy data" />
     <MESSAGE value="create sklills entity, fixture and some dummy data and cre" />
-    <option name="LAST_COMMIT_MESSAGE" value="create sklills entity, fixture and some dummy data and cre" />
+    <MESSAGE value="added vue" />
+    <option name="LAST_COMMIT_MESSAGE" value="added vue" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

@@ -2,6 +2,7 @@
 
 namespace App\Controller;
 
+use App\Entity\Project;
 use App\Repository\ProjectRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
@@ -12,6 +13,8 @@ class HomeController extends AbstractController
     #[Route('/', name: 'app_home')]
     public function index( ProjectRepository $projectRepository ): Response
     {
-        return new Response('Home');
+        return $this->render('home/index.html.twig', [
+            'data' => 'HomeController',
+        ]);
     }
 }
