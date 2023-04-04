@@ -4,7 +4,13 @@
 
 {% block body %}
 
-<div class="example-wrapper">
-    {{ dump(projects) }}
-</div>
+    <main>
+        {{ include('home/partials/about.html.twig') }}
+        {{ include('home/partials/sklils.twig') }}
+        {{ include('home/partials/my-work.html.twig') }}
+        {{ include('home/partials/selected-projects.html.twig') }}
+        {{ include('home/partials/all-projects.html.twig') }}
+        {{ include('home/partials/contact.html.twig') }}
+    </main>
+
 {% endblock %}

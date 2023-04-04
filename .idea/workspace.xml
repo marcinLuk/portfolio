@@ -4,14 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9e5fbb0e-4630-48db-becf-9f7bd1095c17" name="Changes" comment="create home page controller, project entity and controller">
-      <change afterPath="$PROJECT_DIR$/migrations/Version20230404095631.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+    <list default="true" id="9e5fbb0e-4630-48db-becf-9f7bd1095c17" name="Changes" comment="added fixture and some dummy data">
+      <change afterPath="$PROJECT_DIR$/src/DataFixtures/AppFixtures.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/home/partials/about.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/home/partials/all-projects.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/home/partials/contact.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/home/partials/my-work.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/home/partials/selected-projects.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/home/partials/sklils.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/bundles.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/bundles.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/symfony.lock" beforeDir="false" afterPath="$PROJECT_DIR$/symfony.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/HomeController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/ProjectController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/ProjectController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/global/nav/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/global/nav/index.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/home/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/home/index.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -221,7 +226,7 @@
       <workItem from="1680586613541" duration="4446000" />
       <workItem from="1680598715933" duration="2956000" />
       <workItem from="1680601806458" duration="172000" />
-      <workItem from="1680602013739" duration="1987000" />
+      <workItem from="1680602013739" duration="7578000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <created>1680529332524</created>
@@ -237,7 +242,14 @@
       <option name="project" value="LOCAL" />
       <updated>1680602771335</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="added fixture and some dummy data">
+      <created>1680604041344</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1680604041344</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -260,7 +272,8 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="init" />
     <MESSAGE value="create home page controller, project entity and controller" />
-    <option name="LAST_COMMIT_MESSAGE" value="create home page controller, project entity and controller" />
+    <MESSAGE value="added fixture and some dummy data" />
+    <option name="LAST_COMMIT_MESSAGE" value="added fixture and some dummy data" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
