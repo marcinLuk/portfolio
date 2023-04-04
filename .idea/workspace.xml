@@ -4,11 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9e5fbb0e-4630-48db-becf-9f7bd1095c17" name="Changes" comment="added experience entity">
+    <list default="true" id="9e5fbb0e-4630-48db-becf-9f7bd1095c17" name="Changes" comment="added experience dummy data">
+      <change afterPath="$PROJECT_DIR$/assets/js/Vue/store/services/projects.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/app.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/js/Vue/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/Vue/App.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/Vue/components/global/Title.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DataFixtures/AppFixtures.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/DataFixtures/AppFixtures.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/js/Vue/store/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/Vue/store/modules/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/js/Vue/store/projects.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/Vue/store/modules/projects.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/js/Vue/store/skills.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/Vue/store/modules/skills.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/ProjectController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/ProjectController.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -182,7 +186,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "true",
-    "last_opened_file_path": "//wsl$/Ubuntu/home/marcin6462/docker-compose-lamp/www/portfolio/assets/js/Vue/store",
+    "last_opened_file_path": "//wsl$/Ubuntu/home/marcin6462/docker-compose-lamp/www/portfolio/assets/js/Vue/store/services",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -199,12 +203,14 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="\\wsl$\Ubuntu\home\marcin6462\docker-compose-lamp\www\portfolio\assets\js\Vue\store\services" />
       <recent name="\\wsl$\Ubuntu\home\marcin6462\docker-compose-lamp\www\portfolio\assets\js\Vue\store" />
       <recent name="\\wsl$\Ubuntu\home\marcin6462\docker-compose-lamp\www\portfolio\assets\styles\abstract" />
       <recent name="\\wsl$\Ubuntu\home\marcin6462\docker-compose-lamp\www\portfolio\assets\styles\templates" />
       <recent name="\\wsl$\Ubuntu\home\marcin6462\docker-compose-lamp\www\portfolio\templates" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="\\wsl$\Ubuntu\home\marcin6462\docker-compose-lamp\www\portfolio\assets\js\Vue\store\modules" />
       <recent name="\\wsl$\Ubuntu\home\marcin6462\docker-compose-lamp\www\portfolio\assets\js\Vue\store" />
       <recent name="\\wsl$\Ubuntu\home\marcin6462\docker-compose-lamp\www\portfolio\assets\js" />
       <recent name="\\wsl$\Ubuntu\home\marcin6462\docker-compose-lamp\www\portfolio\templates\global" />
@@ -230,7 +236,7 @@
       <workItem from="1680586613541" duration="4446000" />
       <workItem from="1680598715933" duration="2956000" />
       <workItem from="1680601806458" duration="172000" />
-      <workItem from="1680602013739" duration="18042000" />
+      <workItem from="1680602013739" duration="21920000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <created>1680529332524</created>
@@ -295,7 +301,14 @@
       <option name="project" value="LOCAL" />
       <updated>1680623610691</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="added experience dummy data">
+      <created>1680624172051</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1680624172051</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -323,7 +336,8 @@
     <MESSAGE value="added vue" />
     <MESSAGE value="added vue templates" />
     <MESSAGE value="added experience entity" />
-    <option name="LAST_COMMIT_MESSAGE" value="added experience entity" />
+    <MESSAGE value="added experience dummy data" />
+    <option name="LAST_COMMIT_MESSAGE" value="added experience dummy data" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

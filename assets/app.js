@@ -9,15 +9,15 @@
 import './styles/app.scss';
 
 // start the Stimulus application
-// import './bootstrap';
+import './bootstrap';
 
 import {createApp} from 'vue';
 import {createStore} from "vuex";
 import App from '@/App.vue';
 //store modules
-import mainStore from '@/store/main.js';
-import projectsStore from '@/store/projects.js';
-import skillsStore from '@/store/skills.js';
+import mainStore from '@/store/modules/main.js';
+import projectsStore from '@/store/modules/projects.js';
+import skillsStore from '@/store/modules/skills.js';
 
 const app = createApp({
     components: {

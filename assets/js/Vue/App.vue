@@ -16,7 +16,7 @@
 import Sidebar from "@/components/Sidebar.vue";
 import Main from "@/components/Main.vue";
 import Footer from "@/components/Footer.vue";
-import {mapGetters} from "vuex";
+import {mapActions, mapGetters} from "vuex";
 
 export default {
   name: "App",
@@ -25,8 +25,14 @@ export default {
     Main,
     Footer
   },
-  mounted() {
-
+  methods: {
+    ...mapActions('projects', [
+      'getProjects'
+    ]),
+  },
+  async beforeMount() {
+    //load all data from axios
+    await this.getProjects();
   }
 }
 </script>

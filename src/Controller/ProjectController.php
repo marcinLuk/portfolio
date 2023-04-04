@@ -6,6 +6,7 @@ use App\Entity\Project;
 use App\Form\ProjectType;
 use App\Repository\ProjectRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
@@ -14,11 +15,9 @@ use Symfony\Component\Routing\Annotation\Route;
 class ProjectController extends AbstractController
 {
     #[Route('/', name: 'app_project_index', methods: ['GET'])]
-    public function index(ProjectRepository $projectRepository): Response
+    public function index(ProjectRepository $projectRepository): JsonResponse
     {
-        return $this->render('project/index.html.twig', [
-            'projects' => $projectRepository->findAll(),
-        ]);
+        return $this->json($projectRepository->findAll());
     }
 
     #[Route('/new', name: 'app_project_new', methods: ['GET', 'POST'])]
@@ -41,11 +40,9 @@ class ProjectController extends AbstractController
     }
 
     #[Route('/{id<\d+>}', name: 'app_project_show', methods: ['GET'])]
-    public function show(Project $project): Response
+    public function show(Project $project): JsonResponse
     {
-        return $this->render('project/show.html.twig', [
-            'project' => $project,
-        ]);
+        return $this->json($project);
     }
 
     #[Route('/{id}/edit', name: 'app_project_edit', methods: ['GET', 'POST'])]
