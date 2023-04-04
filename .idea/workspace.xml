@@ -4,19 +4,47 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9e5fbb0e-4630-48db-becf-9f7bd1095c17" name="Changes" comment="added fixture and some dummy data">
-      <change afterPath="$PROJECT_DIR$/src/DataFixtures/AppFixtures.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/home/partials/about.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/home/partials/all-projects.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/home/partials/contact.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/home/partials/my-work.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/home/partials/selected-projects.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/home/partials/sklils.twig" afterDir="false" />
+    <list default="true" id="9e5fbb0e-4630-48db-becf-9f7bd1095c17" name="Changes" comment="create sklills entity, fixture and some dummy data and cre">
+      <change afterPath="$PROJECT_DIR$/.idea/watcherTasks.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/app.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/bootstrap.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/controllers.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/scss/app.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/packages/webpack_encore.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webpack.config.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/bundles.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/bundles.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Controller/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/HomeController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/ProjectController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/ProjectController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/global/nav/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/global/nav/index.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/home/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/home/index.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/symfony.lock" beforeDir="false" afterPath="$PROJECT_DIR$/symfony.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/global/footer/index.html.twig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/global/nav/index.html.twig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/home/index.html.twig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/home/partials/about.html.twig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/home/partials/all-projects.html.twig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/home/partials/contact.html.twig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/home/partials/my-work.html.twig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/home/partials/selected-projects.html.twig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/home/partials/sklils.twig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/project/_delete_form.html.twig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/project/_form.html.twig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/project/edit.html.twig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/project/index.html.twig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/project/new.html.twig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/project/show.html.twig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/skills/_delete_form.html.twig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/skills/_form.html.twig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/skills/edit.html.twig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/skills/index.html.twig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/skills/new.html.twig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/skills/show.html.twig" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -165,6 +193,7 @@
       <path value="$PROJECT_DIR$/vendor/symfony/stopwatch" />
       <path value="$PROJECT_DIR$/vendor/doctrine/data-fixtures" />
       <path value="$PROJECT_DIR$/vendor/doctrine/doctrine-fixtures-bundle" />
+      <path value="$PROJECT_DIR$/vendor/symfony/webpack-encore-bundle" />
     </include_path>
   </component>
   <component name="ProjectId" id="2NuxoWKxX9lz2h338H6PvxI9gbk" />
@@ -203,6 +232,7 @@
       <recent name="\\wsl$\Ubuntu\home\marcin6462\docker-compose-lamp\www\portfolio\templates" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="\\wsl$\Ubuntu\home\marcin6462\docker-compose-lamp\www\portfolio\assets\js" />
       <recent name="\\wsl$\Ubuntu\home\marcin6462\docker-compose-lamp\www\portfolio\templates\global" />
     </key>
   </component>
@@ -226,7 +256,7 @@
       <workItem from="1680586613541" duration="4446000" />
       <workItem from="1680598715933" duration="2956000" />
       <workItem from="1680601806458" duration="172000" />
-      <workItem from="1680602013739" duration="7578000" />
+      <workItem from="1680602013739" duration="10175000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <created>1680529332524</created>
@@ -249,7 +279,21 @@
       <option name="project" value="LOCAL" />
       <updated>1680604041344</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="create sklills entity, fixture and some dummy data and cre">
+      <created>1680609872934</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1680609872934</updated>
+    </task>
+    <task id="LOCAL-00005" summary="create sklills entity, fixture and some dummy data and cre">
+      <created>1680609882445</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1680609882445</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -273,7 +317,8 @@
     <MESSAGE value="init" />
     <MESSAGE value="create home page controller, project entity and controller" />
     <MESSAGE value="added fixture and some dummy data" />
-    <option name="LAST_COMMIT_MESSAGE" value="added fixture and some dummy data" />
+    <MESSAGE value="create sklills entity, fixture and some dummy data and cre" />
+    <option name="LAST_COMMIT_MESSAGE" value="create sklills entity, fixture and some dummy data and cre" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

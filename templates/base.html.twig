@@ -15,15 +15,11 @@
         {% endblock %}
     </head>
     <body>
-        <header>
-            {% include 'global/nav/index.html.twig' %}
-        </header>
         <main>
-            {% block body %}{% endblock %}
+            <div id="app">
+                <App/>
+            </div>
         </main>
-        <footer>
-            {% include 'global/footer/index.html.twig' %}
-        </footer>
     </body>
 </html>
 
