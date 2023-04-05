@@ -6,6 +6,7 @@ use App\Entity\Experience;
 use App\Form\ExperienceType;
 use App\Repository\ExperienceRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
@@ -14,11 +15,9 @@ use Symfony\Component\Routing\Annotation\Route;
 class ExperienceController extends AbstractController
 {
     #[Route('/', name: 'app_experience_index', methods: ['GET'])]
-    public function index(ExperienceRepository $experienceRepository): Response
+    public function index(ExperienceRepository $experienceRepository): JsonResponse
     {
-        return $this->render('experience/index.html.twig', [
-            'experiences' => $experienceRepository->findAll(),
-        ]);
+        return $this->json($experienceRepository->findAll());
     }
 
     #[Route('/new', name: 'app_experience_new', methods: ['GET', 'POST'])]

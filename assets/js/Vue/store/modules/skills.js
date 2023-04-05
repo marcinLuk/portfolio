@@ -1,13 +1,27 @@
+import service from '@/store/services/skills.js'
 
 const skillsStore = {
     state: {
-        currentProject : {}
+        skills : null,
     },
     mutations : {
+        SET_SKILLS(state, skills) {
+            state.skills = skills;
+        }
+    },
+    actions : {
+        async getSkills({commit}) {
+            await service
+                .index()
+                .then( (data) => {
+                    commit('SET_SKILLS', data)
+                })
+        }
 
     },
-    actions : {},
-    getters : {},
+    getters : {
+        allExperience: (state) => state.skills,
+    },
     namespaced: true,
 }
 

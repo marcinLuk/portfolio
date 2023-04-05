@@ -18,6 +18,7 @@ import App from '@/App.vue';
 import mainStore from '@/store/modules/main.js';
 import projectsStore from '@/store/modules/projects.js';
 import skillsStore from '@/store/modules/skills.js';
+import experieniceStore from '@/store/modules/experience.js';
 
 const app = createApp({
     components: {
@@ -29,6 +30,7 @@ const store = createStore({
        main : mainStore,
        projects : projectsStore,
        skills : skillsStore,
+       experience : experieniceStore,
    }
 });
 app.use(store);

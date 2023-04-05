@@ -1,12 +1,15 @@
 <template>
-<main class="main">
-  <About v-if="activeTemplate === 'about'"></About>
-  <MySkills v-if="activeTemplate === 'mySkills'"></MySkills>
-  <Experience v-if="activeTemplate === 'experience'"></Experience>
-  <MyWork v-if="activeTemplate === 'myWork'"></MyWork>
-  <Contact v-if="activeTemplate === 'contact'"></Contact>
-  <Loader v-if="activeTemplate === 'loader'"></Loader>
-</main>
+  <main class="main">
+    <div class="main__template">
+      <About v-if="activeTemplate === 'about'"></About>
+      <MySkills v-if="activeTemplate === 'mySkills'"></MySkills>
+      <Experience v-if="activeTemplate === 'experience'"></Experience>
+      <MyWork v-if="activeTemplate === 'myWork'"></MyWork>
+      <Contact v-if="activeTemplate === 'contact'"></Contact>
+      <Loader v-if="activeTemplate === 'loader'"></Loader>
+      <MyWorkSingle v-if="activeTemplate === 'myWorkSingle'"></MyWorkSingle>
+    </div>
+  </main>
 </template>
 
 <script>
@@ -17,12 +20,13 @@ import Experience from "./experience/Experience.vue";
 import MyWork from "./myWork/MyWork.vue";
 import Contact from "./contact/Contact.vue";
 import Loader from "./loader/Loader.vue";
+import MyWorkSingle from "./myWorkSingle/MyWorkSingle.vue";
 
 export default {
   name: "Main",
-  components: {Loader, Contact, MyWork, Experience, MySkills, About},
+  components: {MyWorkSingle, Loader, Contact, MyWork, Experience, MySkills, About},
   computed: {
-    ...mapGetters('main' , ['activeTemplate'])
+    ...mapGetters('main', ['activeTemplate'])
   },
 }
 </script>

@@ -3,12 +3,11 @@ import service from '@/store/services/projects.js';
 const projectsStore = {
     state: {
         currentProject : null,
-        allProjects : null,
+        projects : null,
     },
     mutations : {
         SET_ALL_PROJECTS(state, projects) {
-            debugger
-            state.allProjects = projects;
+            state.projects = projects;
         },
         SET_CURRENT_PROJECT(state, project) {
             state.currentProject = project
@@ -25,12 +24,12 @@ const projectsStore = {
         async getSingleProject({commit}, id) {
             await service
                 .show(id)
-                .then( data => commit('SET_ALL_PROJECTS', data))
+                .then( data => commit('SET_CURRENT_PROJECT', data))
         }
 
     },
     getters : {
-        allProjects: (state) => state.allProjects,
+        projects: (state) => state.projects,
         currentProject: (state) => state.currentProject,
     },
     namespaced: true,

@@ -1,5 +1,6 @@
 <template>
   <div class="app">
+    LOADED: {{loaded}}
     <div class="app__sidebar">
       <Sidebar></Sidebar>
     </div>
@@ -25,14 +26,33 @@ export default {
     Main,
     Footer
   },
+  computed : {
+    ...mapGetters('main', [
+        'loaded'
+    ])
+  },
   methods: {
+    ...mapActions('main', [
+      'setLoaded'
+    ]),
     ...mapActions('projects', [
       'getProjects'
     ]),
+    ...mapActions('experience', [
+      'getExperience'
+    ]),
+    ...mapActions('skills', [
+      'getSkills'
+    ]),
+    async appInit() {
+      await this.getProjects();
+      await this.getExperience();
+      await this.getSkills();
+      this.setLoaded( true );
+    },
   },
-  async beforeMount() {
-    //load all data from axios
-    await this.getProjects();
+  beforeMount() {
+    this.appInit();
   }
 }
 </script>
