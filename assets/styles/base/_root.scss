@@ -1,0 +1,11 @@
+@use '../base/mixins' as *;
+
+:root {
+  //spacing
+  --padding : 1rem;
+  @include min-lg {
+    --padding : 1.2rem;
+  }
+  //animations
+  --animation-time : 0.5s;
+}

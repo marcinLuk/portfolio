@@ -1,0 +1,30 @@
+//brakepoints
+@mixin min-xsm {
+  @media screen and (min-width: 320px) {
+    @content
+  }
+}
+
+@mixin min-sm {
+  @media screen and (min-width: 425px) {
+    @content
+  }
+}
+
+@mixin min-md {
+  @media screen and (min-width: 768px) {
+    @content
+  }
+}
+
+@mixin min-lg {
+  @media screen and (min-width: 1024px) {
+    @content
+  }
+}
+
+@mixin min-xl {
+  @media screen and (min-width: 1440px) {
+    @content
+  }
+}

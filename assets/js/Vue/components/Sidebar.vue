@@ -7,9 +7,8 @@
         </div>
       </div>
     </div>
-    <ul class="sidebar__list">
+    <ul class="sidebar__list" :class="{'active' : navIsActive}">
       <li @click="setActiveTemplate('about')" class="sidebar__item">About</li>
-      <li @click="setActiveTemplate('mySkills')" class="sidebar__item">My Skills</li>
       <li @click="setActiveTemplate('experience')" class="sidebar__item">Experience</li>
       <li @click="setActiveTemplate('myWork')" class="sidebar__item">My Work</li>
       <li @click="setActiveTemplate('contact')" class="sidebar__item">Contact</li>

@@ -1,0 +1,49 @@
+@use '../base/mixins' as *;
+
+.app {
+  display: grid;
+  position: relative;
+  overflow-x: hidden;
+  height: 100vh;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto 1fr auto;
+  grid-template-areas:
+    "sidebar"
+    "main"
+    "footer";
+
+  @include min-lg {
+    grid-template-columns: 9rem 1fr;
+    grid-template-rows: 1fr 1fr auto;
+    align-items: stretch;
+    justify-items: stretch;
+    grid-template-areas:
+    "sidebar main"
+    "sidebar main"
+    "sidebar footer";
+  }
+
+  &__sidebar {
+    padding: var(--padding);
+    position: relative;
+    grid-area: sidebar;
+  }
+
+  &__main {
+    grid-area: main;
+    padding: var(--padding);
+    @include min-lg {
+      justify-self: flex-start;
+      padding-left: 12rem;
+    }
+  }
+
+  &__loader {
+
+  }
+
+  &__footer {
+    padding: var(--padding);
+    grid-area: footer;
+  }
+}

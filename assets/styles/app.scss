@@ -1,4 +1,3 @@
-@use "abstract";
-@use "base";
-@use "ui";
-@use "templates";
+@import "base";
+@import "ui";
+@import "templates";

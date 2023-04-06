@@ -1,6 +1,6 @@
 <template>
-  <div class="my-work" v-if="allProjects">
-    <div v-for="project in allProjects">
+  <div class="my-work" v-if="projects">
+    <div v-for="project in projects">
       <img :src="project.thumbnailUrl" alt="">
       <div>{{ project.name }}</div>
     </div>
@@ -16,7 +16,7 @@ export default {
 
   },
   computed : {
-    ...mapGetters('projects' , ['allProjects'])
+    ...mapGetters('projects' , ['projects'])
   }
 }
 </script>

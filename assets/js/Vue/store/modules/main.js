@@ -1,7 +1,7 @@
 
 const mainStore = {
     state : {
-        activeTemplate : 'about', //about, mySkills, experience, myWork, myWorkSingle, contact, loader
+        activeTemplate : 'welcome', //about, mySkills, experience, myWork, myWorkSingle, contact, welcome
         loaded : false,
     },
     mutations : {

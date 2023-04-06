@@ -14,6 +14,7 @@ import './bootstrap';
 import {createApp} from 'vue';
 import {createStore} from "vuex";
 import App from '@/App.vue';
+
 //store modules
 import mainStore from '@/store/modules/main.js';
 import projectsStore from '@/store/modules/projects.js';

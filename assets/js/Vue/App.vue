@@ -1,10 +1,10 @@
 <template>
   <div class="app">
-    LOADED: {{loaded}}
     <div class="app__sidebar">
       <Sidebar></Sidebar>
     </div>
     <div class="app__main">
+      <div class="app__loader" v-show="!loaded">LOADER</div>
       <Main></Main>
     </div>
     <div class="app__footer">
