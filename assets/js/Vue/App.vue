@@ -1,10 +1,39 @@
 <template>
   <div class="app">
+    <transition name="fade">
+      <div v-show="!loaded" class="app__loader">
+        <div class="lds-roller">
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+      </div>
+    </transition>
+    <img :src="require('../../img/bg.jpg')" alt="background" class="app__bg">
+    <div class="firefly"></div>
+    <div class="firefly"></div>
+    <div class="firefly"></div>
+    <div class="firefly"></div>
+    <div class="firefly"></div>
+    <div class="firefly"></div>
+    <div class="firefly"></div>
+    <div class="firefly"></div>
+    <div class="firefly"></div>
+    <div class="firefly"></div>
+    <div class="firefly"></div>
+    <div class="firefly"></div>
+    <div class="firefly"></div>
+    <div class="firefly"></div>
+    <div class="firefly"></div>
     <div class="app__sidebar">
       <Sidebar></Sidebar>
     </div>
-    <div class="app__main">
-      <div class="app__loader" v-show="!loaded">LOADER</div>
+    <div class="app__main" :class="`app__main--${activeTemplate}`">
       <Main></Main>
     </div>
     <div class="app__footer">
@@ -26,9 +55,10 @@ export default {
     Main,
     Footer
   },
-  computed : {
+  computed: {
     ...mapGetters('main', [
-        'loaded'
+      'loaded',
+      'activeTemplate'
     ])
   },
   methods: {
@@ -48,7 +78,7 @@ export default {
       await this.getProjects();
       await this.getExperience();
       await this.getSkills();
-      this.setLoaded( true );
+      this.setLoaded(true);
     },
   },
   beforeMount() {

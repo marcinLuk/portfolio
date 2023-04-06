@@ -1,5 +1,5 @@
 <template>
-CONTACT
+<div>CONTACT</div>
 </template>
 
 <script>

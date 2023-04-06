@@ -1,11 +1,27 @@
 @use '../base/mixins' as *;
 
 :root {
-  //spacing
-  --padding : 1rem;
+  //colors
+  --color-primary: #DEB992;
+  --color-secondary: #051622;
+  --color-complementary: #1BA098;
+  --color-complementary2: #28ede0;
+  --color-complementary3: rgba(27, 160, 151, 0.3);
+  --color-bg: var(--color-secondary);
+  --color-bg2: rgba(0,31,51,.5);
+  --color-white: var(--color-secondary);
+  --color-text: #869ba9;
+  //spacing, containers
+  --container-max-lg :89rem;
+  --padding : 1.5rem;
   @include min-lg {
-    --padding : 1.2rem;
+    --padding : 2rem;
   }
   //animations
+  --transition-time : 0.5s;
   --animation-time : 0.5s;
+  --animation-delay : 0.3s;
+  --animation-top : -2rem;
+  //borders
+  --border-radius: 0.4rem;
 }

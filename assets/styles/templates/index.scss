@@ -1,3 +1,7 @@
-@import "app";
-@import "sidebar";
-@import "main";
+@use "app";
+@use "sidebar";
+@use "main";
+@use "welcome";
+@use "footer";
+@use 'about';
+@use 'expierence-list';

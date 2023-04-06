@@ -1,12 +1,12 @@
 <template>
   <main class="main">
     <div class="main__template-container">
-      <Welcome v-if="activeTemplate === 'welcome'"></Welcome>
-      <About v-if="activeTemplate === 'about'"></About>
-      <Experience v-if="activeTemplate === 'experience'"> </Experience>
-      <MyWork v-if="activeTemplate === 'myWork'"></MyWork>
-      <MyWorkSingle v-if="activeTemplate === 'myWorkSingle'"></MyWorkSingle>
-      <Contact v-if="activeTemplate === 'contact'"></Contact>
+      <Welcome v-show="activeTemplate === 'welcome'"></Welcome>
+      <About v-show="activeTemplate === 'about'"></About>
+      <Experience v-show="activeTemplate === 'experience'"></Experience>
+      <MyWork v-show="activeTemplate === 'myWork'"></MyWork>
+      <MyWorkSingle v-show="activeTemplate === 'myWorkSingle'"></MyWorkSingle>
+      <Contact v-show="activeTemplate === 'contact'"></Contact>
     </div>
   </main>
 </template>

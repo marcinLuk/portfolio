@@ -1,24 +1,39 @@
 <template>
   <div class="about">
-    <h2 class="about__title">About</h2>
-    <div class="about__desc">Jestem programistą WordPress z trzyletnim doświadczeniem zawodowym.
-      Przez rok pracowałem jako freelancer, tworząc strony internetowe i sklepy online
-      dla różnych klientów. Następnie dołączyłem do zespołu softwarhouse Appwise,
-      gdzie zajmowałem się rozwijaniem i utrzymywaniem projektów opartych na
-      WordPress, Woocommerce.
-      Posiadam umiejętności w zakresie tworzenia responsywnych i funkcjonalnych
-      stron internetowych, optymalizacji wydajności i bezpieczeństwa, integracji z
-      różnymi systemami i API.
-      Interesuję się nowymi technologiami i stale podnoszę swoje kwalifikacje.
-    </div>
-    <div class="about__img">
-      <img src="/build/img/me.jpg" alt="">
-    </div>
+    <Transition name="fadeleft">
+      <h2 v-show="activeTemplate === 'about'" style="--animation-delay: 0.2s" class="about__title">About</h2>
+    </Transition>
+    <Transition name="fadeleft">
+      <div v-show="activeTemplate === 'about'" class="about__desc" style="--animation-delay: 0.4s">
+        I am a WordPress programmer with three years of
+        professional experience. <br><br>
+        For a year, I
+        worked as a freelancer, creating websites and online stores for various clients. Then I joined the <a
+          href="https://appwise.pl/en/" target="_blank">Appwise</a>
+        software house team, where I was involved in developing and maintaining projects based on WordPress and
+        Woocommerce. <br><br>
+        I have skills in creating responsive and functional websites, optimizing performance and security,
+        integrating with various systems and APIs. I am interested in new technologies and constantly improving my
+        qualifications.
+      </div>
+    </Transition>
+    <Transition name="fadeleft">
+      <div v-show="activeTemplate === 'about'" class="about__img" style="--animation-delay: 0.6s">
+        <img :src="require('../../../../img/me.jpg')" alt="">
+      </div>
+    </Transition>
   </div>
 </template>
 
 <script>
+import {mapGetters} from "vuex";
+
 export default {
-  name: "About"
+  name: "About",
+  computed: {
+    ...mapGetters('main', [
+      'activeTemplate'
+    ])
+  }
 }
 </script>

@@ -1,8 +1,55 @@
+@use '../base/mixins' as *;
+
+html {
+  font-size: 62.5%;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
 
 body {
+  font-size: 1.6rem;
+  font-family: 'Montserrat', sans-serif;
   margin: 0;
+  background-color: var(--color-bg);
+  color: var(--color-text);
 }
 
 h1 {
+  font-family: 'Fira Sans', sans-serif;
+  font-weight: 100;
+  font-size: 6rem;
+  color: var(--color-primary);
+  margin-bottom: 1.5rem;
+  line-height: 1;
+  @include min-lg {
+    font-size: 8rem;
+  }
+}
 
+h2 {
+  font-family: 'Fira Sans', sans-serif;
+  font-weight: 100;
+  font-size: 5rem;
+  margin-bottom: 1.5rem;
+  line-height: 1;
+  color: var(--color-primary);
+  @include min-lg {
+    font-size: 7rem;
+  }
+}
+p {
+  margin-bottom: 1.5rem;
+}
+
+a, a:visited {
+  transition: color var(--transition-time);
+  color: var(--color-complementary);
+}
+
+a:hover {
+  color: var(--color-complementary2);
 }
