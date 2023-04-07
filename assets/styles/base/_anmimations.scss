@@ -9,6 +9,17 @@
   opacity: 0;
 }
 
+//fade in - fast
+.fadefast-enter-active,
+.fadefast-leave-active {
+  transition: opacity 0.3s ease;
+}
+
+.fadefast-enter-from,
+.fadefast-leave-to {
+  opacity: 0;
+}
+
 //fade in left
 .fadeleft-enter-active,
 .fadeleft-leave-active {

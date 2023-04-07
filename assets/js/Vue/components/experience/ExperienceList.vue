@@ -1,12 +1,18 @@
 <template>
   <div class="experience-list" v-if="allExperience">
     <div class="experience-list__sidebar">
-      <div v-for="experience in allExperience"  @click="setExpierence(experience)" class="experience__sidebar-item">
-      {{ experience.companyName }}
+      <div v-for="(experience, index) in allExperience"
+           @click="setActiveItem(experience, index)"
+           :class="{active : activeIndex === index }"
+           class="experience-list__sidebar-item"
+      >
+        {{ experience.companyName }}
       </div>
     </div>
     <div class="experience-list__content">
-      <ExpierenceContentItem></ExpierenceContentItem>
+      <Transition name="fadefast">
+        <ExpierenceContentItem v-show="transition"></ExpierenceContentItem>
+      </Transition>
     </div>
   </div>
 </template>
@@ -20,18 +26,27 @@ export default {
   components: {ExpierenceContentItem},
   data() {
     return {
-      activeIndex: 0
+      activeIndex: 0,
+      transition: true,
     }
   },
   computed: {
-    ...mapGetters('experience' , [
+    ...mapGetters('experience', [
       'allExperience'
     ])
   },
   methods: {
-    ...mapActions('experience' , [
-        'setExpierence'
-    ])
+    ...mapActions('experience', [
+      'setExpierence'
+    ]),
+    setActiveItem(item, index) {
+      this.transition = false;
+      this.activeIndex = index;
+      setTimeout(() => {
+        this.transition = true;
+        this.setExpierence(item);
+      }, 300 )
+    }
   }
 }
 </script>

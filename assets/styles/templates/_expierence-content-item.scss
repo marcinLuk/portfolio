@@ -1,0 +1,32 @@
+@use '../base/mixins' as * ;
+
+.expierience-content-item {
+  max-width: 60rem;
+  &__position {
+    margin-bottom: 1rem;
+    font-size: 2rem;
+    font-weight: 900;
+    color: #fff;
+  }
+  &__name {
+    color: var(--color-complementary2);
+  }
+  &__start-date {
+  }
+  &__end-date {
+  }
+  &__desc {
+    position: relative;
+    padding: 1.5rem 0 0 3rem;
+
+    &::before {
+      content: "▹";
+      position: absolute;
+      left: 0;
+      color: var(--color-complementary2);
+    }
+    &:first-child{
+      padding-top: 3rem;
+    }
+  }
+}

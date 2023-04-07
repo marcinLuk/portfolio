@@ -1,8 +1,9 @@
 <template>
   <div class="expierience-content-item" v-if="expierenceShow">
-    <div class="expierience-content-item__name">{{expierenceShow.companyName}}</div>
-    <div class="expierience-content-item__start-date">{{startDate(expierenceShow.startDate)}}</div>
-    <div class="expierience-content-item__end-date">{{endDate(expierenceShow.endDate)}}</div>
+    <div class="expierience-content-item__position">{{expierenceShow.position}}  at <span class="expierience-content-item__name"> {{expierenceShow.companyName}}</span></div>
+    <span class="expierience-content-item__start-date">{{startDate(expierenceShow.startDate)}}</span>
+    <span> - </span>
+    <span class="expierience-content-item__end-date">{{endDate(expierenceShow.endDate)}}</span>
     <div v-if="expierenceShow.jobDesc1" class="expierience-content-item__desc">{{expierenceShow.jobDesc1}}</div>
     <div v-if="expierenceShow.jobDesc2" class="expierience-content-item__desc">{{expierenceShow.jobDesc2}}</div>
     <div v-if="expierenceShow.jobDesc3" class="expierience-content-item__desc">{{expierenceShow.jobDesc3}}</div>
@@ -11,6 +12,7 @@
 
 <script>
 import {mapGetters} from "vuex";
+import dayjs from 'dayjs';
 
 export default {
   name: "ExpierenceContentItem",
@@ -21,10 +23,13 @@ export default {
   },
   methods: {
     startDate( date ) {
-      return date;
+      return dayjs(date).format('MMMM YYYY');
     },
     endDate(date) {
-      return date;
+      if(!date) {
+        return 'Present'
+      }
+      return dayjs(date).format('MMMM YYYY');
     }
   }
 }

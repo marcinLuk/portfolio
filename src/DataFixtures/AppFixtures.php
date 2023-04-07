@@ -32,6 +32,11 @@ class AppFixtures extends Fixture
         $project3->setDescription('Lorem ipsum dolor sit amet, consectetur adipiscinit anim id est laborum');
         $project3->setThumbnailUrl('https://picsum.photos/200/300');
         $manager->persist( $project3 );
+        $manager->persist( $project3 );
+        $manager->persist( $project3 );
+        $manager->persist( $project3 );
+        $manager->persist( $project3 );
+        $manager->persist( $project3 );
 
         $skill1 = new Skills();
         $skill1->setName('Skill 1');
@@ -48,9 +53,9 @@ class AppFixtures extends Fixture
         $expierence->setPosition('position');
         $expierence->setStartDate( new \DateTime('2022/12/02'));
         $expierence->setEndDate(null);
-        $expierence->setJobDesc1('Lorem ipsum');
-        $expierence->setJobsDesc2('Lorem ipsum');
-        $expierence->setJobDesc3('Lorem ipsum');
+        $expierence->setJobDesc1('Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi');
+        $expierence->setJobsDesc2('Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi');
+        $expierence->setJobDesc3('Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi');
         $manager->persist( $expierence );
 
         $expierence2 = new Experience();
@@ -58,9 +63,36 @@ class AppFixtures extends Fixture
         $expierence2->setPosition('position');
         $expierence2->setStartDate( new \DateTime('2021/12/02'));
         $expierence2->setEndDate(new \DateTime('2022/12/02'));
-        $expierence2->setJobDesc1('Lorem ipsum');
-        $expierence2->setJobsDesc2('Lorem ipsum');
+        $expierence2->setJobDesc1('Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi');
+        $expierence2->setJobsDesc2('Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi');
         $manager->persist( $expierence2 );
+
+        $expierence3 = new Experience();
+        $expierence3->setCompanyName('company name');
+        $expierence3->setPosition('position');
+        $expierence3->setStartDate( new \DateTime('2021/12/02'));
+        $expierence3->setEndDate(new \DateTime('2022/12/02'));
+        $expierence3->setJobDesc1('Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi');
+        $expierence3->setJobsDesc2('Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi');
+        $manager->persist( $expierence3 );
+
+        $expierence4 = new Experience();
+        $expierence4->setCompanyName('company name');
+        $expierence4->setPosition('position');
+        $expierence4->setStartDate( new \DateTime('2021/12/02'));
+        $expierence4->setEndDate(new \DateTime('2022/12/02'));
+        $expierence4->setJobDesc1('Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi');
+        $expierence4->setJobsDesc2('Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi');
+        $manager->persist( $expierence4 );
+
+        $expierence5 = new Experience();
+        $expierence5->setCompanyName('company name');
+        $expierence5->setPosition('position');
+        $expierence5->setStartDate( new \DateTime('2021/12/02'));
+        $expierence5->setEndDate(new \DateTime('2022/12/02'));
+        $expierence5->setJobDesc1('Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi');
+        $expierence5->setJobsDesc2('Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi');
+        $manager->persist( $expierence5 );
 
         $manager->flush();
     }
