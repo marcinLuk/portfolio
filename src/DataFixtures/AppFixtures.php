@@ -16,7 +16,9 @@ class AppFixtures extends Fixture
         $project1->setName('Lorem ipsum');
         $project1->setLink('http://test.com');
         $project1->setDescription('Lorem ipsum dolor sit amet, consectetur adipiscinit anim id est laborum');
+        $project1->setGithub('www.test.pl');
         $project1->setThumbnailUrl('https://picsum.photos/200/300');
+        $project1->setImgUrl('https://picsum.photos/200/300');
         $manager->persist( $project1 );
 
         $project2 = new Project();
@@ -24,6 +26,7 @@ class AppFixtures extends Fixture
         $project2->setLink('http://test.com');
         $project2->setDescription('Lorem ipsum dolor sit amet, consectetur adipiscinit anim id est laborum');
         $project2->setThumbnailUrl('https://picsum.photos/200/300');
+        $project2->setImgUrl('https://picsum.photos/200/300');
         $manager->persist( $project2 );
 
         $project3 = new Project();
@@ -31,11 +34,7 @@ class AppFixtures extends Fixture
         $project3->setLink('http://test.com');
         $project3->setDescription('Lorem ipsum dolor sit amet, consectetur adipiscinit anim id est laborum');
         $project3->setThumbnailUrl('https://picsum.photos/200/300');
-        $manager->persist( $project3 );
-        $manager->persist( $project3 );
-        $manager->persist( $project3 );
-        $manager->persist( $project3 );
-        $manager->persist( $project3 );
+        $project3->setImgUrl('https://picsum.photos/200/300');
         $manager->persist( $project3 );
 
         $skill1 = new Skills();

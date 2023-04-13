@@ -41,6 +41,19 @@ h2 {
     font-size: 7rem;
   }
 }
+
+h3 {
+  font-family: 'Fira Sans', sans-serif;
+  font-weight: 100;
+  font-size: 3rem;
+  margin-bottom: 1.5rem;
+  line-height: 1;
+  color: var(--color-primary);
+  @include min-lg {
+    font-size: 4rem;
+  }
+}
+
 p {
   margin-bottom: 1.5rem;
 }

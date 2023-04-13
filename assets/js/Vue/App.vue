@@ -14,22 +14,22 @@
         </div>
       </div>
     </transition>
-    <img :src="require('../../img/bg.jpg')" alt="background" class="app__bg">
-    <div class="firefly"></div>
-    <div class="firefly"></div>
-    <div class="firefly"></div>
-    <div class="firefly"></div>
-    <div class="firefly"></div>
-    <div class="firefly"></div>
-    <div class="firefly"></div>
-    <div class="firefly"></div>
-    <div class="firefly"></div>
-    <div class="firefly"></div>
-    <div class="firefly"></div>
-    <div class="firefly"></div>
-    <div class="firefly"></div>
-    <div class="firefly"></div>
-    <div class="firefly"></div>
+<!--    <img :src="require('../../img/bg.jpg')" alt="background" class="app__bg">-->
+<!--    <div class="firefly"></div>-->
+<!--    <div class="firefly"></div>-->
+<!--    <div class="firefly"></div>-->
+<!--    <div class="firefly"></div>-->
+<!--    <div class="firefly"></div>-->
+<!--    <div class="firefly"></div>-->
+<!--    <div class="firefly"></div>-->
+<!--    <div class="firefly"></div>-->
+<!--    <div class="firefly"></div>-->
+<!--    <div class="firefly"></div>-->
+<!--    <div class="firefly"></div>-->
+<!--    <div class="firefly"></div>-->
+<!--    <div class="firefly"></div>-->
+<!--    <div class="firefly"></div>-->
+<!--    <div class="firefly"></div>-->
     <div class="app__sidebar">
       <Sidebar></Sidebar>
     </div>

@@ -1,0 +1,50 @@
+@use "../base/mixins" as * ;
+
+.my-work-single {
+  opacity: 0;
+  position: relative;
+  border-radius: var(--border-radius);
+  padding: var(--padding);
+  z-index: 3;
+  width: 100%;
+  height: 100%;
+  transition: all var(--transition-time);
+
+  &:hover {
+    opacity: 1;
+  }
+
+  &__title {
+    text-decoration: none;
+  }
+
+  &__desc {
+
+  }
+
+  &__tech-list {
+    margin: 2rem 0;
+    display: flex;
+    gap: 1rem;
+  }
+
+  &__links {
+    display: flex;
+    gap: 1rem;
+  }
+
+  &__link {
+
+  }
+
+  &__img {
+    position: absolute;
+    z-index: -2;
+    width: 100%;
+    height: 100%;
+    display: block;
+    top: 0;
+    left: 0;
+    border-radius: var(--border-radius);
+  }
+}

@@ -50,11 +50,15 @@
     @include min-lg {
       width: 100%;
       padding: 3rem 3rem;
-      border-top: 1px solid var(--color-complementary3);
+      border-top: 1px solid var(--color-text);
 
       &:last-child {
-        border-bottom: 1px solid var(--color-complementary3);
+        border-bottom: 1px solid var(--color-text);
       }
+    }
+
+    a {
+      color: var(--color-text);
     }
 
     &.active a, &:hover a {

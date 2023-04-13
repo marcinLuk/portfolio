@@ -21,12 +21,9 @@ const projectsStore = {
                     commit('SET_ALL_PROJECTS', data)
                 })
         },
-        async getSingleProject({commit}, id) {
-            await service
-                .show(id)
-                .then( data => commit('SET_CURRENT_PROJECT', data))
+        setCurrentProject({commit}, project) {
+            commit('SET_CURRENT_PROJECT', project)
         }
-
     },
     getters : {
         projects: (state) => state.projects,
@@ -34,5 +31,4 @@ const projectsStore = {
     },
     namespaced: true,
 }
-
 export default projectsStore;

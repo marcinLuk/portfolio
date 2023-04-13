@@ -3,7 +3,7 @@
 .btn {
   width: fit-content;
   display: block;
-  background: transparent;
+  background-color: transparent;
   border: 1px solid var(--color-complementary);
   border-radius: var(--border-radius);
   padding: 1.25rem 1.75rem;
@@ -11,10 +11,22 @@
   line-height: 1;
   text-decoration: none;
   cursor: pointer;
-  transition: color var(--transition-time) , border var(--transition-time);
+  transition: all var(--transition-time);
+  white-space: nowrap;
 
   &:hover {
     color: var(--color-complementary2);
     border:1px solid var(--color-complementary2);
+  }
+
+  &--fill {
+    color: var(--color-white);
+    background: var(--color-complementary);
+
+    &:hover {
+      color: var(--color-white);
+      border:1px solid var(--color-complementary2);
+      background-color: var(--color-complementary2);
+    }
   }
 }
