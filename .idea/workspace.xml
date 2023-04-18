@@ -4,33 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9e5fbb0e-4630-48db-becf-9f7bd1095c17" name="Changes" comment="FE - experience tab">
-      <change afterPath="$PROJECT_DIR$/assets/img/bg2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/js/Vue/components/myWork/MyWorkSingleCopy.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/styles/templates/_my-work-single.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/styles/templates/_my-work.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/migrations/Version20230407094928.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+    <list default="true" id="9e5fbb0e-4630-48db-becf-9f7bd1095c17" name="Changes" comment="FE - minor fixes">
+      <change afterPath="$PROJECT_DIR$/assets/js/Vue/store/services/contact.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Controller/ContactController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/img/bg.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/assets/img/bg.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/js/Vue/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/Vue/App.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/Vue/components/Main.vue" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/Vue/components/Main.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/Vue/components/mySkills/MySkills.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/Vue/components/myWork/MyWork.vue" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/Vue/components/myWork/MyWork.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/js/Vue/components/contact/Contact.vue" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/Vue/components/contact/Contact.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/js/Vue/store/modules/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/Vue/store/modules/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/Vue/store/modules/projects.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/Vue/store/modules/projects.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/styles/base/_global.scss" beforeDir="false" afterPath="$PROJECT_DIR$/assets/styles/base/_global.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/styles/base/_root.scss" beforeDir="false" afterPath="$PROJECT_DIR$/assets/styles/base/_root.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/styles/templates/_about.scss" beforeDir="false" afterPath="$PROJECT_DIR$/assets/styles/templates/_about.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/styles/templates/_app.scss" beforeDir="false" afterPath="$PROJECT_DIR$/assets/styles/templates/_app.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/styles/templates/_expierence-list.scss" beforeDir="false" afterPath="$PROJECT_DIR$/assets/styles/templates/_expierence-list.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/styles/templates/_main.scss" beforeDir="false" afterPath="$PROJECT_DIR$/assets/styles/templates/_main.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/styles/templates/_sidebar.scss" beforeDir="false" afterPath="$PROJECT_DIR$/assets/styles/templates/_sidebar.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/styles/templates/index.scss" beforeDir="false" afterPath="$PROJECT_DIR$/assets/styles/templates/index.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/styles/ui/_btn.scss" beforeDir="false" afterPath="$PROJECT_DIR$/assets/styles/ui/_btn.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DataFixtures/AppFixtures.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/DataFixtures/AppFixtures.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Project.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Project.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/packages/framework.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/framework.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/home/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/home/index.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -273,7 +257,9 @@
       <workItem from="1680785668571" duration="51000" />
       <workItem from="1680845058339" duration="19081000" />
       <workItem from="1680864708354" duration="46000" />
-      <workItem from="1681380683601" duration="580000" />
+      <workItem from="1681380683601" duration="9367000" />
+      <workItem from="1681392615731" duration="484000" />
+      <workItem from="1681810241112" duration="155000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <created>1680529332524</created>
@@ -394,7 +380,14 @@
       <option name="project" value="LOCAL" />
       <updated>1680851545457</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="FE - minor fixes">
+      <created>1681381377943</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1681381377943</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -429,7 +422,8 @@
     <MESSAGE value="Added admin dashboard" />
     <MESSAGE value="FE" />
     <MESSAGE value="FE - experience tab" />
-    <option name="LAST_COMMIT_MESSAGE" value="FE - experience tab" />
+    <MESSAGE value="FE - minor fixes" />
+    <option name="LAST_COMMIT_MESSAGE" value="FE - minor fixes" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

@@ -5,7 +5,7 @@
 {% block body %}
 
     <div id="app">
-        <App/>
+        <App crf_token="{{ csrf_token('contact-form') }}"></App>
     </div>
 
 {% endblock %}
