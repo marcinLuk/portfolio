@@ -1,11 +1,11 @@
 <template>
   <main class="main">
     <div class="main__template-container">
-      <Welcome v-show="activeTemplate === 'welcome'"></Welcome>
-      <About v-show="activeTemplate === 'about'"></About>
-      <Experience v-show="activeTemplate === 'experience'"></Experience>
-      <MyWork v-show="activeTemplate === 'myWork'"></MyWork>
-      <Contact v-show="activeTemplate === 'contact'"></Contact>
+      <Welcome v-show="activeTemplate === 'welcome'" />
+      <About v-show="activeTemplate === 'about'" />
+      <Experience v-show="activeTemplate === 'experience'" />
+      <MyWork v-show="activeTemplate === 'myWork'" />
+      <Contact v-show="activeTemplate === 'contact'" />
     </div>
   </main>
 </template>
@@ -19,7 +19,7 @@ import Contact from "./contact/Contact.vue";
 import Welcome from "./weclcome/Welcome.vue";
 
 export default {
-  name: "Main",
+  name: "MainContainer",
   components: {Welcome, Contact, MyWork, Experience, About},
   computed: {
     ...mapGetters('main', ['activeTemplate'])

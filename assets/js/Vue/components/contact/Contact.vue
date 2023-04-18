@@ -1,20 +1,80 @@
 <template>
-    <div class="contact">
-        <Transition name="fadeleft">
-            <h2 v-show="activeTemplate === 'contact'" style="--animation-delay: 0.2s" class="contact__title">
-                Contact</h2>
-        </Transition>
-        <form @submit="formSubmit">
-            <input v-model="name" type="text" name="name" placeholder="Name">
-            <input v-model="email" type="text" name="email" placeholder="Email">
-            <p v-if="error && inputErrors.email">{{ inputErrors.email }}</p>
-            <input v-model="subject" type="text" name="subject" placeholder="Subject">
-            <textarea v-model="message" name="message" placeholder="Message"> </textarea>
-            <p v-if="error && inputErrors.message">{{ inputErrors.message }}</p>
-            <button type="submit">Submit</button>
-            <p v-if="serverResponse" :class="{ 'error' : (error && serverResponse) }">{{ serverResponse }}</p>
-        </form>
-    </div>
+  <div class="contact">
+    <Transition name="fadeleft">
+      <h2
+        v-show="activeTemplate === 'contact'"
+        style="--animation-delay: 0.2s"
+        class="contact__title"
+      >
+        Contact
+      </h2>
+    </Transition>
+    <Transition name="fadeleft">
+      <form
+        v-show="activeTemplate === 'contact'"
+        style="--animation-delay: 0.4s"
+        class="contact__form"
+        @submit="formSubmit"
+      >
+        <div class="contact__input contact__input--half">
+          <input
+            v-model="name"
+            type="text"
+            name="name"
+            placeholder="Name"
+          >
+        </div>
+        <div class="contact__input contact__input--half">
+          <input
+            v-model="email"
+            type="text"
+            name="email"
+            placeholder="Email"
+          >
+          <p
+            v-show="error && inputErrors.email"
+            class="contact__error"
+          >
+            {{ inputErrors.email }}
+          </p>
+        </div>
+        <div class="contact__input">
+          <input
+            v-model="subject"
+            type="text"
+            name="subject"
+            placeholder="Subject"
+          >
+        </div>
+        <div class="contact__textarea">
+          <textarea
+            v-model="message"
+            name="message"
+            placeholder="Message"
+          />
+          <p
+            v-show="error && inputErrors.message"
+            class="contact__error"
+          >
+            {{ inputErrors.message }}
+          </p>
+        </div>
+        <button
+          type="submit"
+          class="btn contact__button"
+        >
+          Submit
+        </button>
+        <p
+          v-show="serverResponse"
+          class="contact__response"
+          :class="{ 'contact__response--error' : (error && serverResponse) }"
+        >
+          {{ serverResponse }}
+        </p>
+      </form>
+    </Transition>
+  </div>
 </template>
 
 <script>
@@ -47,23 +107,23 @@ export default {
         formSubmit(event) {
             event.preventDefault();
             this.validateData();
-            if(!this.error) {
+            if (!this.error) {
                 sendEmail({
                     crfToken: this.crfToken,
-                    name : this.name,
-                    email : this.email,
-                    subject : this.subject,
-                    message : this.message,
-                }).then( response => {
-                   if(response.status == 200) {
-                       this.serverResponse = 'Your message has benn send'
-                       setTimeout(() => {
-                           this.serverResponse = false;
-                       }, 3000 )
-                    }  else {
-                       this.serverResponse = 'Error'
-                       this.error = true;
-                   }
+                    name: this.name,
+                    email: this.email,
+                    subject: this.subject,
+                    message: this.message,
+                }).then(response => {
+                    if (response.status === 200) {
+                        this.serverResponse = 'Your message has been sent';
+                        setTimeout(() => {
+                            this.serverResponse = false;
+                        }, 3000)
+                    } else {
+                        this.serverResponse = 'Sorry, something go wrong, please try again later'
+                        this.error = true;
+                    }
                 });
             }
         },
@@ -71,7 +131,7 @@ export default {
             this.error = false;
             this.inputErrors.email = '';
             this.inputErrors.message = '';
-            //messsage
+            //message
             if (this.message.length === 0) {
                 this.error = true;
                 this.inputErrors.message = 'Field cannot be empty';

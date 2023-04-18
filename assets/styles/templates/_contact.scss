@@ -1,0 +1,68 @@
+@use '../base/mixins' as *;
+
+.contact {
+  $formGap : 15px;
+  &__title {
+
+  }
+
+  &__form {
+    display: flex;
+    gap: $formGap;
+    flex-wrap: wrap;
+
+    @include min-lg() {
+      width: 64rem;
+    }
+  }
+
+  &__input {
+    width: 100%;
+
+    &--half {
+      @include min-lg() {
+        width: calc(50% - calc( #{$formGap} / 2 ) );
+      }
+    }
+  }
+
+  &__textarea {
+    width: 100%;
+    min-height: 300px;
+  }
+
+  &__response, &__error {
+    margin-bottom: 0;
+    padding-left: 10px;
+    font-size: 1.4rem;
+    margin-top: 1rem;
+  }
+
+  &__error {
+    color: var(--color-error);
+  }
+
+  &__response {
+    width: 100%;
+    color: var(--color-complementary2);
+    &--error {
+      color: var(--color-error);
+    }
+  }
+
+  &__button {
+    margin-top: 2rem;
+    width: 100%;
+    color: var(--color-complementary);
+
+    &:hover {
+      color: var(--color-complementary2);
+    }
+
+    @include min-lg() {
+      width: fit-content;
+      padding: 1.25rem 6.75rem;
+    }
+  }
+
+}

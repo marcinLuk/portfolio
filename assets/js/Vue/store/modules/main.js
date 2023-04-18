@@ -1,7 +1,7 @@
 
 const mainStore = {
     state : {
-        activeTemplate : 'contact', //about, mySkills, experience, myWork, myWorkSingle, contact, welcome
+        activeTemplate : 'welcome', //about, mySkills, experience, myWork, myWorkSingle, contact, welcome
         loaded : false,
         crfToken : '',
     },
