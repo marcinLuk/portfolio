@@ -3,6 +3,8 @@
 namespace App\Entity;
 
 use App\Repository\ProjectRepository;
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 
 #[ORM\Entity(repositoryClass: ProjectRepository::class)]
@@ -30,6 +32,14 @@ class Project
 
     #[ORM\Column(length: 255)]
     private ?string $imgUrl = null;
+
+    #[ORM\ManyToMany(targetEntity: Techstack::class)]
+    private Collection $techstack;
+
+    public function __construct()
+    {
+        $this->techstack = new ArrayCollection();
+    }
 
     public function getId(): ?int
     {
@@ -104,6 +114,30 @@ class Project
     public function setImgUrl(string $imgUrl): self
     {
         $this->imgUrl = $imgUrl;
+
+        return $this;
+    }
+
+    /**
+     * @return Collection<int, Techstack>
+     */
+    public function getTechstack(): Collection
+    {
+        return $this->techstack;
+    }
+
+    public function addTechstack(Techstack $techstack): self
+    {
+        if (!$this->techstack->contains($techstack)) {
+            $this->techstack->add($techstack);
+        }
+
+        return $this;
+    }
+
+    public function removeTechstack(Techstack $techstack): self
+    {
+        $this->techstack->removeElement($techstack);
 
         return $this;
     }

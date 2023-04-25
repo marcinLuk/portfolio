@@ -5,6 +5,7 @@ namespace App\DataFixtures;
 use App\Entity\Experience;
 use App\Entity\Project;
 use App\Entity\Skills;
+use App\Entity\Techstack;
 use Doctrine\Bundle\FixturesBundle\Fixture;
 use Doctrine\Persistence\ObjectManager;
 
@@ -12,6 +13,17 @@ class AppFixtures extends Fixture
 {
     public function load(ObjectManager $manager): void
     {
+
+        $techstack1 = new Techstack();
+        $techstack1->setName('Vue');
+        $techstack1->setImgUrl('https://picsum.photos/200/300');
+        $manager->persist($techstack1);
+
+        $techstack2 = new Techstack();
+        $techstack2->setName('WP');
+        $techstack2->setImgUrl('https://picsum.photos/200/300');
+        $manager->persist($techstack2);
+
         $project1 = new Project();
         $project1->setName('Lorem ipsum');
         $project1->setLink('http://test.com');
@@ -19,6 +31,7 @@ class AppFixtures extends Fixture
         $project1->setGithub('www.test.pl');
         $project1->setThumbnailUrl('https://picsum.photos/200/300');
         $project1->setImgUrl('https://picsum.photos/200/300');
+        $project1->addStack( $techstack1 );
         $manager->persist( $project1 );
 
         $project2 = new Project();
