@@ -4,6 +4,7 @@ namespace App\Controller\Admin;
 
 use App\Entity\Admin;
 use EasyCorp\Bundle\EasyAdminBundle\Controller\AbstractCrudController;
+use EasyCorp\Bundle\EasyAdminBundle\Field\ArrayField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\EmailField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\TextField;
 
@@ -18,6 +19,7 @@ class AdminCrudController extends AbstractCrudController
     {
         yield EmailField::new('email');
         yield TextField::new('password');
+        yield ArrayField::new('roles');
     }
 
 }
