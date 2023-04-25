@@ -16,10 +16,8 @@ class AdminCrudController extends AbstractCrudController
 
     public function configureFields(string $pageName): iterable
     {
-        return [
-            EmailField::new('email'),
-            TextField::new('password')
-        ];
+        yield EmailField::new('email');
+        yield TextField::new('password');
     }
 
 }

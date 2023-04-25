@@ -17,14 +17,12 @@ class ProjectCrudController extends AbstractCrudController
 
     public function configureFields(string $pageName): iterable
     {
-        return [
-            TextField::new('name'),
-            TextField::new('link'),
-            TextField::new('description'),
-            TextField::new('thumbnail_url'),
-            TextField::new('github'),
-            TextField::new('img_url'),
-            AssociationField::new('techstack')->autocomplete()
-        ];
+        yield TextField::new('name');
+        yield TextField::new('link');
+        yield TextField::new('description');
+        yield TextField::new('thumbnail_url');
+        yield TextField::new('github');
+        yield TextField::new('img_url');
+        yield AssociationField::new('techstack')->autocomplete();
     }
 }

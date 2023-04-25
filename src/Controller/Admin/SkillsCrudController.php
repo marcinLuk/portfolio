@@ -14,13 +14,10 @@ class SkillsCrudController extends AbstractCrudController
         return Skills::class;
     }
 
-
     public function configureFields(string $pageName): iterable
     {
-        return [
-            TextField::new('name'),
-            IntegerField::new('precent'),
-        ];
+        yield TextField::new('name');
+        yield IntegerField::new('precent');
     }
 
 }

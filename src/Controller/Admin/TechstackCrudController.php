@@ -15,10 +15,8 @@ class TechstackCrudController extends AbstractCrudController
 
     public function configureFields(string $pageName): iterable
     {
-        return [
-            TextField::new('name'),
-            TextField::new('img_url')
-        ];
+        yield TextField::new('name');
+        yield TextField::new('img_url');
     }
 
 }
