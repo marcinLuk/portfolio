@@ -16,6 +16,9 @@ class ProjectType extends AbstractType
             ->add('link')
             ->add('description')
             ->add('thumbnail_url')
+            ->add('github')
+            ->add('imgUrl')
+//            ->add('techstack')
         ;
     }
 

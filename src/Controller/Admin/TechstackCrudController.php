@@ -2,24 +2,22 @@
 
 namespace App\Controller\Admin;
 
-use App\Entity\Skills;
+use App\Entity\Techstack;
 use EasyCorp\Bundle\EasyAdminBundle\Controller\AbstractCrudController;
-use EasyCorp\Bundle\EasyAdminBundle\Field\IntegerField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\TextField;
 
-class SkillsCrudController extends AbstractCrudController
+class TechstackCrudController extends AbstractCrudController
 {
     public static function getEntityFqcn(): string
     {
-        return Skills::class;
+        return Techstack::class;
     }
-
 
     public function configureFields(string $pageName): iterable
     {
         return [
             TextField::new('name'),
-            IntegerField::new('precent'),
+            TextField::new('img_url')
         ];
     }
 

@@ -2,24 +2,23 @@
 
 namespace App\Controller\Admin;
 
-use App\Entity\Skills;
+use App\Entity\Admin;
 use EasyCorp\Bundle\EasyAdminBundle\Controller\AbstractCrudController;
-use EasyCorp\Bundle\EasyAdminBundle\Field\IntegerField;
+use EasyCorp\Bundle\EasyAdminBundle\Field\EmailField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\TextField;
 
-class SkillsCrudController extends AbstractCrudController
+class AdminCrudController extends AbstractCrudController
 {
     public static function getEntityFqcn(): string
     {
-        return Skills::class;
+        return Admin::class;
     }
-
 
     public function configureFields(string $pageName): iterable
     {
         return [
-            TextField::new('name'),
-            IntegerField::new('precent'),
+            EmailField::new('email'),
+            TextField::new('password')
         ];
     }
 
