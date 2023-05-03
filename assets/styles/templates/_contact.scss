@@ -2,8 +2,14 @@
 
 .contact {
   $formGap : 15px;
-  &__title {
 
+  &--login {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: var(--padding);
   }
 
   &__form {
