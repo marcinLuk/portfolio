@@ -4,20 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9e5fbb0e-4630-48db-becf-9f7bd1095c17" name="Changes" comment="Login Auth">
-      <change afterPath="$PROJECT_DIR$/.htaccess" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/..htaccess" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.env.test" beforeDir="false" />
+    <list default="true" id="9e5fbb0e-4630-48db-becf-9f7bd1095c17" name="Changes" comment="Prod">
       <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/portfolio.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/portfolio.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/Vue/components/about/About.vue" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/Vue/components/about/About.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/Vue/components/myWork/MyWork.vue" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/Vue/components/myWork/MyWork.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/Vue/components/myWork/MyWorkSingle.vue" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/Vue/components/myWork/MyWorkSingle.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/styles/templates/_my-work-single.scss" beforeDir="false" afterPath="$PROJECT_DIR$/assets/styles/templates/_my-work-single.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/styles/templates/_my-work.scss" beforeDir="false" afterPath="$PROJECT_DIR$/assets/styles/templates/_my-work.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -266,7 +255,7 @@
       <workItem from="1682579416559" duration="615000" />
       <workItem from="1683084289173" duration="5243000" />
       <workItem from="1683529101328" duration="4566000" />
-      <workItem from="1683535286032" duration="9043000" />
+      <workItem from="1683535286032" duration="10619000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <created>1680529332524</created>
@@ -401,7 +390,21 @@
       <option name="project" value="LOCAL" />
       <updated>1683090420114</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="Prod">
+      <created>1683545450230</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1683545450230</updated>
+    </task>
+    <task id="LOCAL-00021" summary="Prod">
+      <created>1683545897006</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1683545897006</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -438,7 +441,8 @@
     <MESSAGE value="FE - experience tab" />
     <MESSAGE value="FE - minor fixes" />
     <MESSAGE value="Login Auth" />
-    <option name="LAST_COMMIT_MESSAGE" value="Login Auth" />
+    <MESSAGE value="Prod" />
+    <option name="LAST_COMMIT_MESSAGE" value="Prod" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
