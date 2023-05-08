@@ -25,14 +25,11 @@
               {{ project.description }}
             </p>
             <div class="my-work-single__tech-list">
-              <div class="my-work-single__tech-list-item">
-                Vue
-              </div>
-              <div class="my-work-single__tech-list-item">
-                React
-              </div>
-              <div class="my-work-single__tech-list-item">
-                Php
+              <div
+                v-for="techstack in project.techstack"
+                class="my-work-single__tech-list-item"
+              >
+                {{ techstack.Name }}
               </div>
             </div>
             <div class="my-work-single__links">

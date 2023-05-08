@@ -27,14 +27,17 @@
         v-show="loaded"
         style="--animation-delay: 1.4s"
       >
-        <a class="btn">Contact me</a>
+        <a
+          class="btn"
+          @click="setActiveTemplate('contact')"
+        >Contact me</a>
       </div>
     </Transition>
   </div>
 </template>
 
 <script>
-import {mapGetters} from "vuex";
+import {mapActions, mapGetters} from "vuex";
 
 export default {
   name: "Welcome",
@@ -44,5 +47,11 @@ export default {
       'activeTemplate'
     ])
   },
+    methods : {
+      ...mapActions('main', [
+          'setActiveTemplate'
+      ])
+    }
+
 }
 </script>
