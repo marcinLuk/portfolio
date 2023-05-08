@@ -6,6 +6,7 @@ use App\Repository\ProjectRepository;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\HttpFoundation\File\File;
 
 #[ORM\Entity(repositoryClass: ProjectRepository::class)]
 class Project
@@ -35,6 +36,8 @@ class Project
 
     #[ORM\ManyToMany(targetEntity: Techstack::class)]
     private Collection $techstack;
+
+    protected $img;
 
     public function __construct()
     {
@@ -140,5 +143,13 @@ class Project
         $this->techstack->removeElement($techstack);
 
         return $this;
+    }
+
+    public function setImg( File $file = null ) {
+        $this->img = $file;
+    }
+
+    public function getImg() {
+        return $this->img;
     }
 }

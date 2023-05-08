@@ -87,7 +87,7 @@
             </div>
           </div>
           <img
-            :src="project.imgUrl"
+            :src="require(`../../../../img/projects/${project.imgUrl}`)"
             class="my-work__bg-img"
             alt="Project screenshot"
           >
