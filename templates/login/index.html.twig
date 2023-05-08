@@ -1,0 +1,21 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <div class="contact contact--login">
+        <form action="{{ path('app_login') }}" method="post" class="contact__form contact__form--login">
+            <div class="contact__input">
+                <input type="text" id="username" name="_username" value="{{ username }}" placeholder="Username">
+            </div>
+            <div class="contact__input">
+                <input type="password" id="password" name="_password" placeholder="Password">
+            </div>
+            <input type="hidden" name="_target_path" value="/admin">
+            <div class="contact__input">
+                <button type="submit" class="btn contact__button">Submit</button>
+            </div>
+        </form>
+        {% if error %}
+            <p class="contact__response contact__response--error">{{ error.messageKey }}</p>
+        {% endif %}
+    </div>
+{% endblock %}

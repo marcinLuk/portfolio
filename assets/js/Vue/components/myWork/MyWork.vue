@@ -88,8 +88,8 @@
           </div>
           <img
             :src="project.imgUrl"
-            alt=""
-            class=""
+            class="my-work__bg-img"
+            alt="Project screenshot"
           >
         </div>
       </div>
@@ -102,6 +102,14 @@ import {mapGetters, mapActions} from "vuex";
 
 export default {
   name: "MyWork",
+    computed: {
+        ...mapGetters('projects', [
+            'projects'
+        ]),
+        ...mapGetters('main', [
+            'activeTemplate'
+        ]),
+    },
   methods: {
     ...mapActions('projects', [
       'setCurrentProject'
@@ -110,13 +118,5 @@ export default {
       'setActiveTemplate'
     ])
   },
-  computed: {
-    ...mapGetters('projects', [
-      'projects'
-    ]),
-    ...mapGetters('main', [
-      'activeTemplate'
-    ]),
-  }
 }
 </script>
