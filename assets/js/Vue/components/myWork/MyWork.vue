@@ -11,6 +11,7 @@
       >
         <div
           v-for="project in projects"
+          :key="`project_${project.name }`"
           class="my-work__item"
         >
           <div class="my-work-single">
@@ -21,20 +22,22 @@
             >
               <h3 class="my-work-single__title">{{ project.name }}</h3>
             </a>
+            <div class="my-work-single__tech-list">
+              <div
+                v-for="techstack in project.techstack"
+                :key="`techstack_${project.name }_${techstack.Name}`"
+                class="my-work-single__tech-list-item"
+              >
+                <img
+                  :src="techstack.imgUrl"
+                  :alt="techstack.Name"
+                >
+              </div>
+            </div>
             <p class="my-work-single__desc">
               {{ project.description }}
             </p>
-            <div class="my-work-single__tech-list">
-              <div class="my-work-single__tech-list-item">
-                Vue
-              </div>
-              <div class="my-work-single__tech-list-item">
-                React
-              </div>
-              <div class="my-work-single__tech-list-item">
-                Php
-              </div>
-            </div>
+
             <div class="my-work-single__links">
               <a
                 v-if="project.github"
@@ -91,8 +94,8 @@
           </div>
           <img
             :src="project.imgUrl"
-            alt=""
-            class=""
+            class="my-work__bg-img"
+            alt="Project screenshot"
           >
         </div>
       </div>
@@ -105,6 +108,14 @@ import {mapGetters, mapActions} from "vuex";
 
 export default {
   name: "MyWork",
+    computed: {
+        ...mapGetters('projects', [
+            'projects'
+        ]),
+        ...mapGetters('main', [
+            'activeTemplate'
+        ]),
+    },
   methods: {
     ...mapActions('projects', [
       'setCurrentProject'
@@ -113,13 +124,5 @@ export default {
       'setActiveTemplate'
     ])
   },
-  computed: {
-    ...mapGetters('projects', [
-      'projects'
-    ]),
-    ...mapGetters('main', [
-      'activeTemplate'
-    ]),
-  }
 }
 </script>

@@ -28,6 +28,17 @@
     gap: 1rem;
   }
 
+  &__tech-list-item {
+    width: 30px;
+    height: 30px;
+
+    img {
+      object-fit: contain;
+      width: 30px;
+      height: 30px;
+    }
+  }
+
   &__links {
     display: flex;
     gap: 1rem;
