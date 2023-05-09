@@ -18,7 +18,8 @@ class TechstackCrudController extends AbstractCrudController
     {
         yield TextField::new('name');
         yield ImageField::new('img_url')
-            ->setBasePath('assests/img/techstack');
+            ->setBasePath('assests/img/techstack')
+            ->setUploadDir('/assets/img/projects/');
     }
 
 }
