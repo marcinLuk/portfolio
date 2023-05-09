@@ -16,7 +16,8 @@ class Techstack
     private ?int $id = null;
     #[ORM\Column(length: 62)]
     private ?string $Name = null;
-    #[ORM\Column(length: 255)]
+
+    #[ORM\Column(length: 255, nullable: true)]
     private ?string $img_url = null;
 
     public function __construct()
@@ -51,11 +52,12 @@ class Techstack
         return $this->img_url;
     }
 
-    public function setImgUrl(string $img_url): self
+    public function setImgUrl(?string $img_url): self
     {
         $this->img_url = $img_url;
 
         return $this;
     }
+    
 
 }
