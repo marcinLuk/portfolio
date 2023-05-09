@@ -14,7 +14,6 @@ class ExperienceCrudController extends AbstractCrudController
         return Experience::class;
     }
 
-
     public function configureFields(string $pageName): iterable
     {
         yield TextField::new('company_name');

@@ -35,7 +35,6 @@ class DashboardController extends AbstractDashboardController
         yield MenuItem::linkToCrud('Admin', 'fa fa-tags', Admin::class);
         yield MenuItem::linkToCrud('Portfolio', 'fa fa-tags', Project::class);
         yield MenuItem::linkToCrud('Experience', 'fa fa-tags', Experience::class);
-        yield MenuItem::linkToCrud('Skills', 'fa fa-tags', Skills::class);
         yield MenuItem::linkToCrud('Tech stack', 'fa fa-tags', Techstack::class);
     }
 

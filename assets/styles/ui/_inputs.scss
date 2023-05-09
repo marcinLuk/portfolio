@@ -1,19 +1,21 @@
-input, textarea {
-  border: 1px solid var(--color-bg2);
-  padding: 10px;
-  background: var(--color-bg2);
-  color: var(--color-white);
-  outline: none;
-  transition: border-color var(--transition-time);
-  border-radius: var(--border-radius);
-  width: 100%;
+input,
+textarea {
+    width: 100%;
+    padding: 10px;
+    color: var(--color-white);
+    background: var(--color-bg2);
+    border: 1px solid var(--color-bg2);
+    border-radius: var(--border-radius);
+    outline: none;
+    transition: border-color var(--transition-time);
 
-  &:focus-visible, &:focus {
-    border-color: var(--color-complementary2);
-  }
+    &:focus-visible,
+    &:focus {
+        border-color: var(--color-complementary2);
+    }
 }
 
 textarea {
-  width: 100%;
-  min-height: 300px;
+    width: 100%;
+    min-height: 300px;
 }

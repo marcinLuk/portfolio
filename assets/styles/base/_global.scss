@@ -1,68 +1,82 @@
 @use '../base/mixins' as *;
 
 html {
-  font-size: 62.5%;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
-  -webkit-text-size-adjust: 100%;
-  -moz-text-size-adjust: 100%;
-  -ms-text-size-adjust: 100%;
-  text-size-adjust: 100%;
+    font-size: 62.5%;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-size-adjust: 100%;
+    -moz-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    text-size-adjust: 100%;
 }
 
 body {
-  font-size: 1.6rem;
-  font-family: 'Montserrat', sans-serif;
-  margin: 0;
-  background-color: var(--color-bg);
-  color: var(--color-text);
+    margin: 0;
+    color: var(--color-text);
+    font-size: 1.6rem;
+    font-family: 'Montserrat', sans-serif;
+    background-color: var(--color-bg);
+
+    &::-webkit-scrollbar {
+        background-color: var(--color-complementary3);
+    }
+
+    &::-webkit-scrollbar-track {
+        background-color: var(--color-secondary);
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background-color: var(--color-complementary3);
+        border-radius: var(--border-radius);
+    }
 }
 
 h1 {
-  font-family: 'Fira Sans', sans-serif;
-  font-weight: 100;
-  font-size: 6rem;
-  color: var(--color-primary);
-  margin-bottom: 1.5rem;
-  line-height: 1;
-  @include min-lg {
-    font-size: 8rem;
-  }
+    margin-bottom: 1.5rem;
+    color: var(--color-primary);
+    font-weight: 100;
+    font-size: 6rem;
+    font-family: 'Fira Sans', sans-serif;
+    line-height: 1;
+    @include min-lg {
+        font-size: 8rem;
+    }
 }
 
 h2 {
-  font-family: 'Fira Sans', sans-serif;
-  font-weight: 100;
-  font-size: 5rem;
-  margin-bottom: 1.5rem;
-  line-height: 1;
-  color: var(--color-primary);
-  @include min-lg {
-    font-size: 7rem;
-  }
+    margin-bottom: 1.5rem;
+    color: var(--color-primary);
+    font-weight: 100;
+    font-size: 5rem;
+    font-family: 'Fira Sans', sans-serif;
+    line-height: 1;
+    @include min-lg {
+        font-size: 7rem;
+    }
 }
 
 h3 {
-  font-family: 'Fira Sans', sans-serif;
-  font-weight: 100;
-  font-size: 3rem;
-  margin-bottom: 1.5rem;
-  line-height: 1;
-  color: var(--color-primary);
-  @include min-lg {
-    font-size: 4rem;
-  }
+    margin-bottom: 1.5rem;
+    color: var(--color-primary);
+    font-weight: 100;
+    font-size: 3rem;
+    font-family: 'Fira Sans', sans-serif;
+    line-height: 1;
+    @include min-lg {
+        font-size: 4rem;
+    }
 }
 
 p {
-  margin-bottom: 1.5rem;
+    margin-bottom: 1.5rem;
 }
 
-a, a:visited {
-  transition: color var(--transition-time);
-  color: var(--color-complementary);
+a,
+a:visited {
+    color: var(--color-complementary);
+    transition: color var(--transition-time);
 }
 
 a:hover {
-  color: var(--color-complementary2);
+    color: var(--color-complementary2);
 }

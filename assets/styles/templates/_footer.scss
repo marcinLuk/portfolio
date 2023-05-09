@@ -1,31 +1,30 @@
-@use "../base/mixins" as *;
+@use '../base/mixins' as *;
 
 .footer {
-
-  &__copy {
-    text-align: center;
-    font-size: 1.2rem;
-    margin-top: 1rem;
-  }
-
-  &__social {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 3rem;
-  }
-
-  &__social-item {
-    svg {
-      width: 2.5rem;
-      stroke: var(--color-complementary);
-      transition: stroke var(--transition-time);
+    &__copy {
+        margin-top: 1rem;
+        font-size: 1.2rem;
+        text-align: center;
     }
 
-    &:hover {
-      svg {
-        stroke: var(--color-complementary2);
-      }
+    &__social {
+        display: flex;
+        gap: 3rem;
+        align-items: center;
+        justify-content: center;
     }
-  }
+
+    &__social-item {
+        svg {
+            width: 2.5rem;
+            transition: stroke var(--transition-time);
+            stroke: var(--color-complementary);
+        }
+
+        &:hover {
+            svg {
+                stroke: var(--color-complementary2);
+            }
+        }
+    }
 }

@@ -18,7 +18,7 @@ import App from '@/App.vue';
 //store modules
 import mainStore from '@/store/modules/main.js';
 import projectsStore from '@/store/modules/projects.js';
-import skillsStore from '@/store/modules/skills.js';
+import techstackStore from '@/store/modules/techstack.js';
 import experieniceStore from '@/store/modules/experience.js';
 
 const app = createApp({
@@ -30,7 +30,7 @@ const store = createStore({
    modules : {
        main : mainStore,
        projects : projectsStore,
-       skills : skillsStore,
+       skills : techstackStore,
        experience : experieniceStore,
    }
 });

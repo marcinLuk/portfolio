@@ -20,7 +20,6 @@ class ProjectCrudController extends AbstractCrudController
         yield TextField::new('name');
         yield TextField::new('link');
         yield TextField::new('description');
-        yield TextField::new('thumbnail_url');
         yield TextField::new('github');
         yield AssociationField::new('techstack')->autocomplete();
         yield ImageField::new('img_url')

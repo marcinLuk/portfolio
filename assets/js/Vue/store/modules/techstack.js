@@ -1,4 +1,4 @@
-import service from '@/store/services/skills.js'
+import service from '@/store/services/techstack.js'
 
 const skillsStore = {
     state: {

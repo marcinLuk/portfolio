@@ -4,6 +4,7 @@ namespace App\Controller\Admin;
 
 use App\Entity\Techstack;
 use EasyCorp\Bundle\EasyAdminBundle\Controller\AbstractCrudController;
+use EasyCorp\Bundle\EasyAdminBundle\Field\ImageField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\TextField;
 
 class TechstackCrudController extends AbstractCrudController
@@ -16,7 +17,8 @@ class TechstackCrudController extends AbstractCrudController
     public function configureFields(string $pageName): iterable
     {
         yield TextField::new('name');
-        yield TextField::new('img_url');
+        yield ImageField::new('img_url')
+            ->setBasePath('assests/img/techstack');
     }
 
 }

@@ -1,11 +1,11 @@
 @use '../base/mixins' as *;
 
 .welcome {
-  max-width: var(--container-max-lg);
-  &__highlited {
-    font-weight: 600;
-  }
-  &__title {
-    position: relative;
-  }
+    max-width: var(--container-max-lg);
+    &__highlited {
+        font-weight: 600;
+    }
+    &__title {
+        position: relative;
+    }
 }

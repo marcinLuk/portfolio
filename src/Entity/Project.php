@@ -25,9 +25,6 @@ class Project
     #[ORM\Column(length: 255)]
     private ?string $description = null;
 
-    #[ORM\Column(length: 255)]
-    private ?string $thumbnail_url = null;
-
     #[ORM\Column(length: 255, nullable: true)]
     private ?string $github = null;
 
@@ -36,8 +33,6 @@ class Project
 
     #[ORM\ManyToMany(targetEntity: Techstack::class)]
     private Collection $techstack;
-
-    protected $img;
 
     public function __construct()
     {
@@ -81,18 +76,6 @@ class Project
     public function setDescription(string $description): self
     {
         $this->description = $description;
-
-        return $this;
-    }
-
-    public function getThumbnailUrl(): ?string
-    {
-        return $this->thumbnail_url;
-    }
-
-    public function setThumbnailUrl(string $thumbnail_url): self
-    {
-        $this->thumbnail_url = $thumbnail_url;
 
         return $this;
     }
@@ -143,13 +126,5 @@ class Project
         $this->techstack->removeElement($techstack);
 
         return $this;
-    }
-
-    public function setImg( File $file = null ) {
-        $this->img = $file;
-    }
-
-    public function getImg() {
-        return $this->img;
     }
 }
