@@ -6,7 +6,7 @@ framework:
             test:
                 dsn: '%env(MESSENGER_TRANSPORT_DSN)%'
             failed: 'doctrine://default?queue_name=failed'
-#            sync: '%env(MESSENGER_TRANSPORT_DSN)%'
+            sync: '%env(MESSENGER_TRANSPORT_DSN)%'
 
         routing:
             Symfony\Component\Mailer\Messenger\SendEmailMessage: async
