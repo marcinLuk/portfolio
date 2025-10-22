@@ -153,3 +153,9 @@ add_action('widgets_init', function () {
         'id' => 'sidebar-footer',
     ] + $config);
 });
+
+/**
+ * Setup ACF Templates
+ */
+app('HomePageTemplate')->setupTemplate();
+

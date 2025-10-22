@@ -134,6 +134,9 @@ Config::define('WP_POST_REVISIONS', env('WP_POST_REVISIONS') ?? true);
 // Disable script concatenation
 Config::define('CONCATENATE_SCRIPTS', false);
 
+// Set the filesystem method to 'direct' to avoid FTP prompts
+Config:define('FS_METHOD', 'direct');
+
 /**
  * Debugging Settings
  */

@@ -43,6 +43,7 @@
     "roots/acorn": "^5.0"
   },
   "require-dev": {
+    "laravel/boost": "^1.4",
     "laravel/pint": "^1.20"
   },
   "suggest": {
