@@ -16,6 +16,7 @@ Config::define('WP_DISABLE_FATAL_ERROR_HANDLER', true);
 Config::define('SCRIPT_DEBUG', true);
 Config::define('DISALLOW_INDEXING', true);
 Config::define( 'WP_ENVIRONMENT_TYPE', 'local' );
+Config::define( 'DISABLE_WP_CRON', true );
 
 ini_set('display_errors', '1');
 
