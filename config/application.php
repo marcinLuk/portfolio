@@ -135,7 +135,7 @@ Config::define('WP_POST_REVISIONS', env('WP_POST_REVISIONS') ?? true);
 Config::define('CONCATENATE_SCRIPTS', false);
 
 // Set the filesystem method to 'direct' to avoid FTP prompts
-Config:define('FS_METHOD', 'direct');
+Config::define('FS_METHOD', 'direct');
 
 /**
  * Debugging Settings
@@ -144,6 +144,16 @@ Config::define('WP_DEBUG_DISPLAY', false);
 Config::define('WP_DEBUG_LOG', false);
 Config::define('SCRIPT_DEBUG', false);
 ini_set('display_errors', '0');
+
+//Multisite
+Config::define('WP_ALLOW_MULTISITE', true);
+Config::define( 'MULTISITE', true );
+Config::define( 'SUBDOMAIN_INSTALL', true );
+Config::define( 'DOMAIN_CURRENT_SITE', 'portfolio.local:8000' );
+Config::define( 'PATH_CURRENT_SITE', '/' );
+Config::define( 'SITE_ID_CURRENT_SITE', 1 );
+Config::define( 'BLOG_ID_CURRENT_SITE', 1 );
+Config::define( 'COOKIE_DOMAIN', $_SERVER['HTTP_HOST'] );
 
 /**
  * Allow WordPress to detect HTTPS when used behind a reverse proxy or a load balancer
