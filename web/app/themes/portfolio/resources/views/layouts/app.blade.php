@@ -6,7 +6,8 @@
     @php(do_action('get_header'))
     @php(wp_head())
 
-    @vite(['resources/css/app.css', 'resources/js/app.js'])
+    @viteReactRefresh
+    @vite(['resources/css/app.css', 'resources/js/app.jsx'])
   </head>
 
   <body @php(body_class())>
@@ -16,6 +17,8 @@
       <a class="sr-only focus:not-sr-only" href="#main">
         {{ __('Skip to content', 'sage') }}
       </a>
+
+      <div id="test"></div>
 
       @include('sections.header')
 
