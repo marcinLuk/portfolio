@@ -2,11 +2,19 @@
 
 namespace App\Providers;
 
-use App\Services\ACF\Groups\TestGroup;
 use App\Services\ACF\Groups\HeroGroup;
-use App\Services\ACF\HomePageTemplate;
+use App\Services\ACF\Groups\HomepageAboutGroup;
+use App\Services\ACF\Groups\HomepageTechStackGroup;
+use App\Services\ACF\Groups\HomepageServicesGroup;
+use App\Services\ACF\Groups\HomepagePortfolioGroup;
+use App\Services\ACF\Groups\HomepageContactGroup;
+use App\Services\ACF\HomepageTemplate;
 use Roots\Acorn\Sage\SageServiceProvider;
 
+/**
+ * ACF Service Provider
+ * Registers all ACF field groups and template classes
+ */
 class ACFServiceProvider extends SageServiceProvider
 {
     /**
@@ -17,19 +25,21 @@ class ACFServiceProvider extends SageServiceProvider
     public function register()
     {
         // Register ACF Field Groups
-        $this->app->singleton('AcfTestGroup', TestGroup::class);
         $this->app->singleton('HeroGroup', HeroGroup::class);
+        $this->app->singleton('HomepageAboutGroup', HomepageAboutGroup::class);
+        $this->app->singleton('HomepageTechStackGroup', HomepageTechStackGroup::class);
+        $this->app->singleton('HomepageServicesGroup', HomepageServicesGroup::class);
+        $this->app->singleton('HomepagePortfolioGroup', HomepagePortfolioGroup::class);
+        $this->app->singleton('HomepageContactGroup', HomepageContactGroup::class);
     }
 
     /**
-     * Register ACF after all services are registered.
+     * Boot ACF services after all services are registered.
      * @return void
      */
     public function boot()
     {
         // Register ACF Templates
-        $this->app->singleton('HomePageTemplate', HomePageTemplate::class);
-
+        $this->app->singleton('HomepageTemplate', HomepageTemplate::class);
     }
-
 }

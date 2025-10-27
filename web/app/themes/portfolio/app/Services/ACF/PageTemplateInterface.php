@@ -11,7 +11,7 @@ interface PageTemplateInterface
     public function setupTemplate();
 
     /**
-     * Create the ACF Field Group for the template
+     * Create the ACF Field Group for the template, this method is called inside setup.php
      * @return void
      */
     public function createTemplateGroup();
