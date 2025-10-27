@@ -11,6 +11,7 @@ on:
 
 permissions:
   contents: read
+  pull-requests: write
 
 jobs:
   php-code-quality:
@@ -57,6 +58,7 @@ jobs:
         run: composer install --no-dev --optimize-autoloader --no-interaction --prefer-dist --no-progress
 
       - name: Run PHP linter
+        working-directory: web/app/themes/portfolio
         run: composer lint
 
   js-code-quality:
@@ -97,3 +99,21 @@ jobs:
       - name: Build assets (verify)
         working-directory: web/app/themes/portfolio
         run: npm run build
+
+  pr-comment:
+    name: Post PR Success Comment
+    runs-on: ubuntu-latest
+    needs: [php-code-quality, js-code-quality]
+    if: github.event_name == 'pull_request' && success()
+
+    steps:
+      - name: Post success comment to PR
+        uses: actions/github-script@v7
+        with:
+          script: |
+            github.rest.issues.createComment({
+              issue_number: context.issue.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              body: '✅ All code quality checks have passed!\n\n- PHP Code Quality: PASSED\n- JavaScript Code Quality: PASSED'
+            })
