@@ -2,7 +2,10 @@
 
 namespace App\Providers;
 
-use App\Services\Test;
+use App\Services\PostTypes\PortfolioProject;
+use App\Services\PostTypes\TechStack;
+use App\Services\Taxonomies\ProjectType;
+use App\Services\Taxonomies\TechCategory;
 use Roots\Acorn\Sage\SageServiceProvider;
 
 class ThemeServiceProvider extends SageServiceProvider
@@ -15,7 +18,14 @@ class ThemeServiceProvider extends SageServiceProvider
     public function register()
     {
         parent::register();
-        $this->app->singleton('test', Test::class);
+        // Register Custom Post Types
+        $this->app->singleton('PortfolioProject', PortfolioProject::class);
+        $this->app->singleton('TechStack', TechStack::class);
+
+        // Register Custom Taxonomies
+        $this->app->singleton('ProjectType', ProjectType::class);
+        $this->app->singleton('TechCategory', TechCategory::class);
+
     }
 
     /**
@@ -26,5 +36,6 @@ class ThemeServiceProvider extends SageServiceProvider
     public function boot()
     {
         parent::boot();
+
     }
 }

@@ -157,4 +157,16 @@ add_action('widgets_init', function () {
 /**
  * Setup ACF Templates
  */
-app('HomePageTemplate')->setupTemplate();
+app('HomepageTemplate')->setupTemplate();
+
+/**
+ * Register Custom Post Types
+ */
+app('PortfolioProject')->setupHooks();
+app('TechStack')->setupHooks();
+
+/**
+ * Register Custom Taxonomies
+ */
+app('ProjectType')->setupHooks();
+app('TechCategory')->setupHooks();
