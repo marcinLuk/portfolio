@@ -1,0 +1,92 @@
+name: Code Quality
+
+on:
+  pull_request:
+    branches:
+      - main
+      - master
+      - develop
+
+jobs:
+  php-code-quality:
+    name: PHP Code Quality
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.2'
+          extensions: mbstring, xml, ctype, json, tokenizer
+          coverage: none
+
+      - name: Get Composer cache directory (root)
+        id: composer-cache-root
+        run: echo "dir=$(composer config cache-files-dir)" >> $GITHUB_OUTPUT
+
+      - name: Cache Composer dependencies (root)
+        uses: actions/cache@v4
+        with:
+          path: ${{ steps.composer-cache-root.outputs.dir }}
+          key: ${{ runner.os }}-composer-root-${{ hashFiles('**/composer.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-composer-root-
+
+      - name: Install Bedrock dependencies
+        run: composer install --no-interaction --prefer-dist --no-progress
+
+      - name: Cache Composer dependencies (theme)
+        uses: actions/cache@v4
+        with:
+          path: web/app/themes/portfolio/vendor
+          key: ${{ runner.os }}-composer-theme-${{ hashFiles('web/app/themes/portfolio/composer.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-composer-theme-
+
+      - name: Install Sage theme dependencies
+        working-directory: web/app/themes/portfolio
+        run: composer install --no-dev --optimize-autoloader --no-interaction --prefer-dist --no-progress
+
+      - name: Run PHP linter
+        run: composer lint
+
+  js-code-quality:
+    name: JavaScript Code Quality
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+          cache-dependency-path: web/app/themes/portfolio/package-lock.json
+
+      - name: Install theme dependencies
+        working-directory: web/app/themes/portfolio
+        run: npm ci
+
+      - name: Check for linting scripts
+        id: check-lint
+        working-directory: web/app/themes/portfolio
+        run: |
+          if grep -q '"lint"' package.json; then
+            echo "has-lint=true" >> $GITHUB_OUTPUT
+          else
+            echo "has-lint=false" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Run linter
+        if: steps.check-lint.outputs.has-lint == 'true'
+        working-directory: web/app/themes/portfolio
+        run: npm run lint
+
+      - name: Build assets (verify)
+        working-directory: web/app/themes/portfolio
+        run: npm run build
