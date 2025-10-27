@@ -4,8 +4,6 @@ on:
   pull_request:
     branches:
       - main
-      - master
-      - develop
   workflow_dispatch:
     # Allows manual triggering from GitHub Actions UI
 
@@ -103,7 +101,11 @@ jobs:
     name: Post PR Success Comment
     runs-on: ubuntu-latest
     needs: [php-code-quality, js-code-quality]
-    if: always() && needs.php-code-quality.result == 'success' && needs.js-code-quality.result == 'success'
+    if: |
+      always() &&
+      github.event_name == 'pull_request' &&
+      needs.php-code-quality.result == 'success' &&
+      needs.js-code-quality.result == 'success'
 
     steps:
       - name: Post success comment to PR
