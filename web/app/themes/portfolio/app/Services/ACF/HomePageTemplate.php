@@ -17,7 +17,7 @@ class HomePageTemplate implements PageTemplateInterface
      */
     public function __construct(
         protected TestGroup $testGroup,
-        protected HeroGroup $heroGroup
+        protected HeroGroup $heroGroup,
     ) {
         $this->groups = [
             $this->heroGroup->groupArray(),
@@ -29,7 +29,7 @@ class HomePageTemplate implements PageTemplateInterface
      */
     public function setupTemplate()
     {
-        add_action('acf/init', function() {
+        add_action('acf/init', function () {
             $this->createTemplateGroup();
         });
     }
@@ -38,19 +38,19 @@ class HomePageTemplate implements PageTemplateInterface
      */
     public function createTemplateGroup()
     {
-        acf_add_local_field_group(array(
+        acf_add_local_field_group([
             'key' => $this->key,
             'title' => $this->title,
             'fields' => $this->groups,
-            'location' => array(
-                array(
-                    array(
+            'location' => [
+                [
+                    [
                         'param' => 'page_template',
                         'operator' => '==',
                         'value' => $this->templateBladeName,
-                    ),
-                ),
-            ),
-        ));
+                    ],
+                ],
+            ],
+        ]);
     }
 }

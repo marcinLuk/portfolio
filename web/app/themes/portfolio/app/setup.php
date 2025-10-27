@@ -158,4 +158,3 @@ add_action('widgets_init', function () {
  * Setup ACF Templates
  */
 app('HomePageTemplate')->setupTemplate();
-

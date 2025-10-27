@@ -57,8 +57,8 @@ jobs:
         working-directory: web/app/themes/portfolio
         run: composer install --no-dev --optimize-autoloader --no-interaction --prefer-dist --no-progress
 
-      - name: Run PHP linter in Theme
-        run: composer lint web/app/themes/portfolio
+      - name: Run PHP linter
+        run: composer lint
 
   js-code-quality:
     name: JavaScript Code Quality

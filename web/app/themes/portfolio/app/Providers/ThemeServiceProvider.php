@@ -15,7 +15,7 @@ class ThemeServiceProvider extends SageServiceProvider
     public function register()
     {
         parent::register();
-        $this->app->singleton('test' , Test::class);
+        $this->app->singleton('test', Test::class);
     }
 
     /**

@@ -17,8 +17,8 @@ class ACFServiceProvider extends SageServiceProvider
     public function register()
     {
         // Register ACF Field Groups
-        $this->app->singleton('AcfTestGroup' , TestGroup::class);
-        $this->app->singleton('HeroGroup' , HeroGroup::class);
+        $this->app->singleton('AcfTestGroup', TestGroup::class);
+        $this->app->singleton('HeroGroup', HeroGroup::class);
     }
 
     /**
@@ -28,7 +28,7 @@ class ACFServiceProvider extends SageServiceProvider
     public function boot()
     {
         // Register ACF Templates
-        $this->app->singleton('HomePageTemplate' , HomePageTemplate::class);
+        $this->app->singleton('HomePageTemplate', HomePageTemplate::class);
 
     }
 
