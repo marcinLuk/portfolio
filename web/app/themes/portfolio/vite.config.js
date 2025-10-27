@@ -12,7 +12,7 @@ export default defineConfig({
     laravel({
       input: [
         'resources/css/app.css',
-        'resources/js/app.js',
+        'resources/js/app.jsx',
         'resources/css/editor.css',
         'resources/js/editor.js',
       ],

@@ -4,10 +4,10 @@ import.meta.glob([
 ]);
 import { createRoot } from 'react-dom/client';
 
-export default function MyApp() {
+export default function MyApp({testProps = 'hello world'}) {
   return (
     <div>
-      <h1>Welcome to my app</h1>
+      <h1>{testProps}</h1>
     </div>
   );
 }

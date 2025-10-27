@@ -18,8 +18,6 @@
         {{ __('Skip to content', 'sage') }}
       </a>
 
-      <div id="test"></div>
-
       @include('sections.header')
 
       <main id="main" class="main">
